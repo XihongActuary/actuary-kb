@@ -25,7 +25,8 @@ body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper-2)
   padding:7px 10px;border-radius:8px;margin:2px 0}
 .side nav a:hover{background:rgba(255,255,255,.07);color:#fff}
 .side nav a.on{background:rgba(181,61,46,.28);color:#fff;font-weight:600}
-.side nav a .w{font-size:10.5px;color:#7e9a8d;white-space:nowrap}
+
+.side nav a.enter{background:#2f6b5a;color:#f5f1e6;font-weight:700;margin-bottom:6px}.side nav a .w{font-size:10.5px;color:#7e9a8d;white-space:nowrap}
 .side nav a.on .w{color:#e8c9c2}
 .prog-mini{margin-top:20px;padding:12px 12px;border:1px dashed rgba(255,255,255,.2);border-radius:10px;
   font-size:11.5px;color:#8fb4a5;line-height:1.8}
