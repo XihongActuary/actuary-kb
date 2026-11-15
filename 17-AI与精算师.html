@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第16章(下)：AI 会让保险更便宜吗</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="17">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html" class="on">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host .index-card{
+            background-color: #f9fafb;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 20px 0 28px;
+            border: 1px solid #e6edf4;
+        }
+.art-host .index-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1e466e;
+        }
+.art-host .index-list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            margin-top: 8px;
+        }
+.art-host .index-list a{
+            font-size: 14px;
+            color: #2c5282;
+            text-decoration: none;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 24px;
+            transition: 0.2s;
+        }
+.art-host .index-list a:hover{
+            background: #dce5f0;
+        }
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .alert-box{
+            background-color: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #7f1a1a;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .ref-links{
+            background-color: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 14px;
+            margin: 0.8em 0 1.2em;
+            font-size: 13px;
+            color: #2c5282;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }
+.art-host .index-list a{
+                font-size: 12px;
+                padding: 3px 10px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="180" y="62" width="110" height="76" rx="12" fill="#fffdf8" stroke="#3d7a66" stroke-width="3"/><circle cx="215" cy="96" r="8" fill="#3d7a66"/><circle cx="255" cy="96" r="8" fill="#c98f2b"/><path d="M212 118 q23 12 46 0" fill="none" stroke="#3d7a66" stroke-width="3"/><line x1="190" y1="62" x2="190" y2="48" stroke="#3d7a66" stroke-width="3"/><line x1="235" y1="62" x2="235" y2="48" stroke="#3d7a66" stroke-width="3"/><line x1="280" y1="62" x2="280" y2="48" stroke="#3d7a66" stroke-width="3"/><circle cx="470" cy="100" r="30" fill="#fffdf8" stroke="#bf5638" stroke-width="3"/><circle cx="470" cy="100" r="10" fill="none" stroke="#bf5638" stroke-width="3"/><path d="M470 82 v-12 M470 118 v12 M452 100 h-12 M488 100 h12" stroke="#bf5638" stroke-width="3"/><path d="M310 100 h130" stroke="#e3d5b4" stroke-width="2" stroke-dasharray="6 6"/><text x="470" y="156" font-size="12" fill="#3a3428" text-anchor="middle" font-family="serif">人机协作，不替代</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第16章</div>
+        <div class="main-title">AI和IFRS17会让保险更便宜吗？<br>精算师会被取代吗？</div>
+        </div>
+
+    <!-- 导航 -->
+    <div class="index-card">
+        <h4>📑 本章导航 · 点击直达</h4>
+        <div class="index-list">
+            <a href="#q1">AI会让保险更便宜吗？</a>
+            <a href="#q2">IFRS17会让保险更便宜吗？</a>
+            <a href="#q3">精算师会被取代吗？</a>
+            <a href="#tech">保险科技趋势</a>
+            <a href="#advice">消费者行动指南</a>
+        </div>
+    </div>
+
+    <p>很多朋友问我：<br>“听说保险行业要换新的会计准则，对消费者有什么影响？”“AI会不会取代精算师？未来的保险会更便宜吗？”“智能手表、健康APP上的步数能换保费折扣，是真的吗？”</p>
+    <p>这些问题，都指向两个核心——<strong>AI和IFRS17，到底会让保险更便宜还是更贵？精算师会不会失业？</strong><br>今天，我直接回答这两个问题，并带你看看精算师眼中的行业未来。</p>
+
+    <h2 id="q1">一、AI会让保险更便宜吗？——短期不一定，长期大概率</h2>
+    <p><strong>直接回答：长期看，AI会降低保险的运营成本，从而让保费下降；但短期内，精准定价可能导致部分人保费上涨。</strong></p>
+    <h3>1. AI如何降低保险成本？</h3>
+    <p>AI已经在多个环节显著提升效率，根据五大上市险企2025年年报披露：</p>
+    <table>
+        <thead><tr><th>环节</th><th>AI应用</th><th>降本效果</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">核保</td><td>智能核保，自动分析医保记录</td><td>平安寿险93%保单秒级通过，人力成本大降</td></tr>
+            <tr><td style="font-weight:600">理赔</td><td>图像识别定损、AI理赔助手</td><td>平安车险定损提速4000倍；Lemonade 3秒赔付</td></tr>
+            <tr><td style="font-weight:600">客服</td><td>7×24小时AI客服机器人</td><td>新华“智小新”服务超1500万客户</td></tr>
+            <tr><td style="font-weight:600">反欺诈</td><td>机器学习识别异常模式</td><td>平安产险2024年拦截119.4亿元欺诈损失</td></tr>
+        </tbody>
+    </table>
+    <p>运营成本下降，理论上保险公司有空间降价。麦肯锡研究认为，生成式AI可为保险业释放<strong>500亿至700亿美元</strong>的生产力空间。</p>
+    <h3>2. 为什么短期不一定会降价？</h3>
+    <ul style="margin-left:1.8em; margin-bottom:1.2em;">
+        <li><strong>精准定价的双刃剑</strong>：AI让保险公司能更精确识别高风险人群。健康的人保费可能下降，但吸烟、肥胖、有家族病史的人保费可能上涨，甚至被拒保。</li>
+        <li><strong>初期投入成本高</strong>：AI系统开发、数据治理、人才引进投入巨大，短期内可能转嫁给消费者。</li>
+        <li><strong>竞争传导需要时间</strong>：降本红利通常需要市场竞争才能传导到价格。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> AI会让保险公司省很多钱，但省下来的钱不一定会马上变成你的折扣。长期看，随着竞争加剧，保费会趋于下降。但如果你是不健康人群，AI反而可能让你多交钱。</div>
+
+    <h2 id="q2">二、IFRS17会让保险更便宜吗？——不会直接降价，但会让产品更“纯粹”</h2>
+    <p><strong>直接回答：IFRS17不会直接导致保费下降，但它会倒逼保险公司调整产品结构，你可能买到保障功能更强、储蓄成分更少的“纯粹保险”。</strong></p>
+    <div class="ref-links">
+        📖 参考：<a href="https://mp.weixin.qq.com/s/-QvlsfVK8zkofFM99brWaQ" target="_blank">IFRS17核心内容</a> · 
+        <a href="https://mp.weixin.qq.com/s/obsRxCKg3gg4oB5lBc9jXg" target="_blank">IFRS17对经营影响</a> · 
+        <a href="https://mp.weixin.qq.com/s/TJ_10VXhTVKaSH3yCGULjg" target="_blank">IFRS17下财报与收入确认</a>
+    </div>
+    <h3>1. IFRS17对保费定价没有直接影响</h3>
+    <p>IFRS17是会计准则，不是定价监管规定。它改变的是保险公司如何确认收入和利润，而不是如何计算保费。所以<strong>不会直接导致保费上涨或下降</strong>。</p>
+    <h3>2. 四大核心变化（快速回顾）</h3>
+    <table>
+        <thead><tr><th>变化维度</th><th>旧准则</th><th>IFRS17</th><th>说人话</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">收入确认</td><td>收保费即确认，集中在缴费期</td><td>按保障期分摊，剔除投资成分</td><td>不能再把“储蓄”当“保险”收入吹</td></tr>
+            <tr><td style="font-weight:600">利润释放</td><td>剩余边际一次性摊销</td><td>合同服务边际（CSM）逐年释放</td><td>利润分期兑现，不能提前透支</td></tr>
+            <tr><td style="font-weight:600">负债计量</td><td>750天移动平均国债收益率</td><td>报告日即期无风险利率</td><td>准备金随市场波动，财报更敏感</td></tr>
+            <tr><td style="font-weight:600">利润表</td><td>准备金提转差“黑匣子”</td><td>承保利润与投资利润分开列示</td><td>一眼看出卖保险赚钱还是靠投资赚钱</td></tr>
+        </tbody>
+    </table>
+    <h3>3. 间接影响：产品结构变化</h3>
+    <p>IFRS17要求将“投资成分”（如满期金、生存金）从保险服务收入中剔除。这意味着：靠储蓄险冲规模的模式不再有好看的财报，保险公司会更聚焦<strong>长期保障型产品</strong>（重疾、定寿、医疗）。纯储蓄型产品（如两全险、高现价产品）可能会减少。</p>
+    <div class="insight-box">
+        📌 <strong>一个数据，体会变化</strong><br>
+        两年期两全险，100人投保，每人年交500元。<br>
+        旧准则第一年确认保费收入：<strong>50,000元</strong><br>
+        IFRS17下第一年确认保险合同收入：<strong>约8,031元</strong>（锐减84%）
+    </div>
+    <h3>4. 利润表透明化，倒逼效率提升</h3>
+    <p>IFRS17将承保利润和投资利润分开列示。如果一家公司承保利润长期为负（靠投资补贴保障），投资者会看得清清楚楚。这会倒逼保险公司提升承保效率、降低费用率，长期可能惠及消费者。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> IFRS17不会让保费直接便宜，但会让保险公司少卖“伪保险”，多做真保障。你以后买到的保险，可能更实在。</div>
+
+    <h2 id="q3">三、精算师会被AI取代吗？——不会，但角色会彻底改变</h2>
+    <p><strong>直接回答：AI不会取代精算师，但只会“算数”的精算师会被淘汰。精算师将转型为“平衡者”“决策顾问”“沟通桥梁”。</strong></p>
+    <div class="ref-links">
+        📖 参考：<a href="https://mp.weixin.qq.com/s/DybmKdpSt8A4z3qn3_JDYQ" target="_blank">《精算师新角色》</a> · 
+        <a href="https://mp.weixin.qq.com/s/tyQnnu2Tc9-XLM2dywTtzQ" target="_blank">《智能体爆发：保险业的AI革命》</a>
+    </div>
+    <h3>1. AI能做什么，不能做什么</h3>
+    <table>
+        <thead><tr><th>工作类型</th><th>AI能做</th><th>精算师做什么（新角色）</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">数据整理、报表生成</td><td>✅ 完全替代</td><td>监控、校验、定义数据治理规则</td></tr>
+            <tr><td style="font-weight:600">基础定价（标准产品）</td><td>✅ 大部分替代</td><td>校准模型、设定业务边界、防止恶性竞争</td></tr>
+            <tr><td style="font-weight:600">复杂产品创新</td><td>⚠️ 辅助</td><td>主导设计、平衡资产负债、压力测试</td></tr>
+            <tr><td style="font-weight:600">资产负债管理</td><td>⚠️ 辅助</td><td>制定长周期策略、匹配分红预期</td></tr>
+            <tr><td style="font-weight:600">监管沟通/解释</td><td>❌ 不能</td><td>用业务语言拆解精算结果，维护消费者信任</td></tr>
+            <tr><td style="font-weight:600">伦理&公平性判断</td><td>❌ 不能</td><td>拒绝算法歧视，保护弱势群体可保性</td></tr>
+        </tbody>
+    </table>
+    <h3>2. 精算师的三大新角色</h3>
+    <ul style="margin-left:1.8em; margin-bottom:1.2em;">
+        <li><strong>⚖️ 平衡者（短期↔长期，风险↔收益）</strong>：AI擅长基于历史数据给出“最优解”，但无法理解经营代际之间的取舍。精算师平衡短期利润与长期稳健、投资风险与偿付能力、股东回报与客户利益。</li>
+        <li><strong>📊 决策参考者（基于公司实际的战略参谋）</strong>：AI提供的一般性答案不能直接用于每家保险公司。精算师把外部数据和AI建议翻译成“适合这家公司”的决策方案。</li>
+        <li><strong>🤝 沟通协调者（连接人、业务与监管）</strong>：AI无法解释复杂的精算假设。精算师向投资者、审计师、监管、客户讲清逻辑，并对AI的“黑箱决策”承担解释和纠偏责任。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> AI是精算师的“超级计算器”，不是替身。精算师的核心能力正从“算得快”变为“看得远、说得清、守得住”。</div>
+
+    <h2 id="tech">四、保险科技的其他趋势（快速一览）</h2>
+    <div class="ref-links">
+        📖 参考：<a href="https://mp.weixin.qq.com/s/mSrdP6qaqMc2ShMBLu8SwA" target="_blank">《AI正在重塑保险的六大赛道》</a>
+    </div>
+    <table>
+        <thead><tr><th>趋势</th><th>现状</th><th>未来展望</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">可穿戴设备+健康险</td><td>步数换积分/保费返还（平安、水滴等试点）</td><td>数据越多折扣越大，或成标配</td></tr>
+            <tr><td style="font-weight:600">按需保险</td><td>按天/小时的旅行险、延误险</td><td>场景化保险（碎屏险、宠物险）爆发</td></tr>
+            <tr><td style="font-weight:600">智能体（OpenClaw）</td><td>水滴ClawSquare、阳光保险内部“养龙虾”</td><td>2026称为“智能体爆发年”，AI可自主执行多步任务</td></tr>
+        </tbody>
+    </table>
+    <div class="alert-box">
+        ⚠️ <strong>隐私提醒</strong>：精准定价是双刃剑。健康人更便宜，不健康者可能被加费。享受便利的同时，注意保护个人健康数据隐私。
+    </div>
+
+    <h2 id="advice">五、未来消费者该怎么办？——你的行动指南</h2>
+    <div class="action-tips">
+        <p><strong>✅ 精算师给普通消费者的4条建议：</strong></p>
+        <p>1️⃣ <strong>健康即财富</strong>：积极保持健康，未来健康险可能根据步数、心率动态调价。好习惯直接省钱。</p>
+        <p>2️⃣ <strong>学会看“新财报”线索</strong>：关注公司年报中“保险服务收入”与“承保利润”。承保利润高，说明公司保障业务扎实。</p>
+        <p>3️⃣ <strong>早做养老规划</strong>：AI和IFRS17不会改变利率下行的趋势。适当时机配置传统年金或增额终身寿，锁定长期复利。</p>
+        <p>4️⃣ <strong>不要怕AI，但要懂精算思维</strong>：无论技术如何变，看懂三元素、会算IRR、会查偿付能力，这些能力永远有用。</p>
+    </div>
+
+    <hr>
+    <!-- 核心结论速记 -->
+    <div class="speed-card">
+        <h4>📌 本章核心结论速记</h4>
+        <table style="margin:0; box-shadow:none;">
+            <thead><tr><th>问题</th><th>答案</th></tr></thead>
+            <tbody>
+                <tr><td style="font-weight:600">AI会让保险更便宜吗？</td><td>长期大概率会，但短期精准定价可能导致部分人保费上涨。</td></tr>
+                <tr><td style="font-weight:600">IFRS17会让保险更便宜吗？</td><td>不会直接降价，但会让产品更“纯粹”，保障功能更强。</td></tr>
+                <tr><td style="font-weight:600">精算师会被AI取代吗？</td><td>不会，但只会算数的精算师会被淘汰；精算师将转型为平衡者、决策顾问、沟通桥梁。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size:13px; text-align:center; color:#95a5a6; margin-top:16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="16-行业未来.html"><small>← 上一篇</small>第16章(上) · 精算师眼中的行业未来</a><a class="next" href="18-全书结语.html"><small>下一篇 →</small>全书结语 · 精算思维陪你走完</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

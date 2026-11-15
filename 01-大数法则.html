@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第1章：大数法则与风险分摊</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="01">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html" class="on">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画：大数法则"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><line x1="60" y1="118" x2="620" y2="118" stroke="#3d7a66" stroke-width="3" stroke-linecap="round"/><circle cx="90" cy="58" r="4.5" fill="#bf5638"/><circle cx="130" cy="92" r="4.5" fill="#bf5638"/><circle cx="170" cy="44" r="4.5" fill="#bf5638"/><circle cx="210" cy="80" r="4.5" fill="#bf5638"/><circle cx="250" cy="100" r="4.5" fill="#bf5638"/><circle cx="290" cy="66" r="4.5" fill="#bf5638"/><circle cx="330" cy="108" r="4.5" fill="#bf5638"/><circle cx="370" cy="126" r="4.5" fill="#c98f2b"/><circle cx="410" cy="110" r="4.5" fill="#c98f2b"/><circle cx="450" cy="122" r="4.5" fill="#c98f2b"/><circle cx="490" cy="116" r="4.5" fill="#c98f2b"/><circle cx="530" cy="120" r="4.5" fill="#c98f2b"/><circle cx="570" cy="117" r="4.5" fill="#c98f2b"/><circle cx="600" cy="119" r="4.5" fill="#c98f2b"/><text x="600" y="140" font-size="13" fill="#3a3428" text-anchor="end" font-family="serif">人数越多，结果越稳</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第1章</div>
+        <div class="main-title">保险凭什么敢“赌”你的未来？<br>——大数法则与风险分摊</div>
+        </div>
+
+    <p>很多朋友问我：<br>“意外险一年才几百块，出了事能赔上百万，保险公司不亏吗？”<br>“我身体很好，基本不去医院，买保险是不是把钱扔水里？”<br>“保险公司怎么知道该收我多少钱？随便定的吗？”</p>
+    <p>这些问题，都指向一个核心——<strong>保险公司凭什么敢“赌”你的未来？</strong><br>今天，我带你从精算师的视角，拆解保险业最底层的数学基石：<strong>大数法则</strong>。</p>
+
+    <h2>一、一个精算师的真实故事：1000人的互助实验</h2>
+    <p>几年前，我帮一个创业团队设计过一个小型互助计划。<br>计划很简单：1000个人加入，每人交10元。如果这一年里有人发生意外（比如车祸身故），就一次性赔给他家人1万元。</p>
+    <p>团队负责人问我：“老张，你觉得10元够不够？万一出事的人太多，我们不得赔穿？”<br>我让他查了一组数据：该年龄段人群的意外身故发生率约为 <strong>0.001</strong>（即千分之一）。<br>也就是说，1000个人里，预期只有 <strong>1个人</strong> 会出事。</p>
+    <p><strong>预期赔款 = 1000人 × 0.001 × 10000元 = 10000元</strong><br>每人交10元，总保费 = 10000元。<br><strong>刚好覆盖预期赔款。</strong></p>
+    <p>当然，实际可能出0个、1个、2个甚至更多。但团队负责人听完后松了口气：“原来不是瞎赌，是有数学依据的。”<br>这个小小的案例，就是保险最原始的模样——<strong>一群人凑钱，帮那个不幸的人扛风险。</strong><br>而精算师的任务，就是算清楚：每人该凑多少，才够用。</p>
+
+    <h2>二、核心原理：大数法则</h2>
+    <h3>什么是大数法则？</h3>
+    <p><strong>大白话：</strong> 一件事你只做一次，结果全靠运气；但如果你做几万、几十万次，结果就会稳定在某个数字附近。</p>
+    <p><strong>举例：</strong><br>抛1次硬币，你不知道是正面还是反面。<br>抛1000次，正反面差不多各一半。<br>抛100万次，几乎就是正好各50万次。</p>
+    <p><strong>保险公司的用法：</strong> 它不知道你明年会不会出事，但它知道卖100万份保险，明年大约会有多少人出事。这个“大约”非常准。<br><strong>精算师就是利用大数法则，把个人“不可预测的风险”，变成群体“可预测的成本”。</strong></p>
+
+    <h3>到底需要多少人，结果才能稳定？</h3>
+    <p>很多朋友会追问：“那要多少人，才算‘足够多’？”<br>精算师有一个简单的估算方法：</p>
+    <div class="insight-box">
+        <strong>📐 波动幅度 ≈ 1 / √(n × p)</strong><br>
+        其中：n = 保单数量，p = 出事概率（比如0.001）
+    </div>
+    <p><strong>什么意思？</strong><br>
+    - 如果 n × p = 1（比如1000人 × 0.001 = 1），波动幅度 ≈ 100%（实际出事人数可能在0~2人之间，波动巨大）。<br>
+    - 如果 n × p = 100（比如10万人 × 0.001 = 100），波动幅度 ≈ 10%（实际在90~110人左右，比较稳）。<br>
+    - 如果 n × p = 10000（比如1000万人 × 0.001 = 10000），波动幅度 ≈ 1%（几乎可以精确预测）。</p>
+    <p><strong>结论：</strong> 意外身故这种概率很低的风险，需要卖出10万份以上的保单，结果才会稳定。所以那些只有几百人的互助平台，风险非常高。</p>
+
+    <p><strong>不同风险需要的“起步规模”</strong></p>
+    <table>
+        <thead><tr><th>风险类型</th><th>发生率（大概）</th><th>稳定所需保单数</th><th>举例</th></tr></thead>
+        <tbody>
+            <tr><td>意外身故</td><td>0.001（千分之一）</td><td>10万份以上</td><td>意外险</td></tr>
+            <tr><td>重疾（30岁）</td><td>0.003</td><td>3~5万份</td><td>重疾险</td></tr>
+            <tr><td>住院医疗</td><td>0.1（10%的人每年住院）</td><td>1000份就够了</td><td>医疗险</td></tr>
+            <tr><td>家庭火灾</td><td>0.0005（万分之五）</td><td>40万份以上</td><td>家财险</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 发生率越低，需要的客户越多。所以买意外险、家财险，尽量选客户量大的公司，或者确认公司有再保险安排（下面会讲）。</div>
+
+    <h2>三、生活类比：赌场为什么稳赚不赔？</h2>
+    <p>你去赌场玩百家乐，单看一局，赌场也没有必胜把握。<br>但赌场每天有成千上万局。每一局赌场胜率只有51%，但几千局下来，实际结果无限接近51%，赌场稳赚那1%的“优势”。</p>
+    <p><strong>保险公司的逻辑类似，但方向相反：</strong><br>- 赌场靠“玩家输钱”赚钱。<br>- 保险公司靠“帮大家分摊风险”赚取合理的管理费。<br>两者都依赖同一个数学定理：<strong>大数法则</strong>。</p>
+
+    <h2>四、小公司怎么办？——再保险，让“小”也能变“稳”</h2>
+    <p>有人会问：“那我只卖了1万份意外险的小公司，是不是就不安全？”<br><strong>不一定。因为小公司可以通过“再保险”来借用别人的客户量。</strong></p>
+    <h3>什么是再保险？</h3>
+    <p><strong>再保险就是“保险公司的保险”。</strong><br>小公司可以把一部分风险转给再保险公司（比如慕尼黑再、瑞士再、中再）。这样一来，即使小公司自己只卖了1万份，但通过再保险，它实际承担的风险相当于被分散到了再保公司的全球海量客户中。</p>
+    <p><strong>打个比方：</strong> 你一个人扛100斤大米，很吃力。但你把90斤分给一个大力士朋友，自己只扛10斤，那就轻松多了。再保险公司就是那个“大力士朋友”。</p>
+
+    <p><strong>再保险的好处：</strong></p>
+    <table>
+        <thead><tr><th>角色</th><th>好处</th></tr></thead>
+        <tbody>
+            <tr><td>投保人</td><td>小公司的保单同样稳定，不用担心公司因运气不好赔穿</td></tr>
+            <tr><td>小保险公司</td><td>降低风险，不会因为一次坏运气就破产</td></tr>
+            <tr><td>再保险公司</td><td>利用自己巨大的客户规模，赚取再保费</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 小公司+优质再保险，既能享受低价，又不用太担心它扛不住。买保险时问问客服：“你们这款产品的再保人是谁？” 听到“慕尼黑再”或“中再”就安心一大半。</div>
+
+    <h2>五、“说人话”总结</h2>
+    <div class="insight-box">
+        <strong>🎲 保险公司赌的不是你个人会不会出事，而是一群人出事的比例基本固定。</strong><br>
+        它不关心张三明天会不会车祸，但关心100万个张三里大约有多少人会车祸。<br>
+        这就是大数法则的魔力：<strong>把个体的“运气”，变成群体的“数学”。</strong><br>
+        而小公司通过再保险，也能享受到大数法则的稳定红利。
+    </div>
+
+    <hr>
+
+    <!-- 核心概念速记卡（中英文对照） -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td>大数法则</td><td>Law of Large Numbers</td><td>做的次数越多，结果越稳定。</td></tr>
+                <tr><td>风险分摊</td><td>Risk Pooling</td><td>大家凑钱，帮那个倒霉的人。</td></tr>
+                <tr><td>再保险</td><td>Reinsurance</td><td>保险公司的保险，用来转嫁风险。</td></tr>
+                <tr><td>波动幅度</td><td>Fluctuation</td><td>实际结果和预期之间的偏差。</td></tr>
+                <tr><td>稳定样本量</td><td>Stable Sample Size</td><td>让结果足够稳定所需的最少客户数。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="00-序言.html"><small>← 上一篇</small>序言 · 为什么你需要懂一点儿精算</a><a class="next" href="02-生命表.html"><small>下一篇 →</small>第2章 · 生命表与死亡率</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

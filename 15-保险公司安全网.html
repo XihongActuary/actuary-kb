@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第15章：保险公司会不会破产？保单安全吗</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="15">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html" class="on">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host .alert-box{
+            background-color: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #7f1a1a;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><path d="M330 44 L430 58 L430 104 Q430 136 380 150 Q330 136 330 104 Z" fill="#3d7a66"/><path d="M380 70 l14 26 l-28 0 z" fill="#f5f1e6"/><line x1="380" y1="96" x2="380" y2="124" stroke="#f5f1e6" stroke-width="4"/><path d="M120 118 Q340 88 560 118" fill="none" stroke="#bf5638" stroke-width="3"/><path d="M120 118 Q340 128 560 118" fill="none" stroke="#bf5638" stroke-width="3"/><circle cx="180" cy="120" r="6" fill="#bf5638"/><circle cx="500" cy="120" r="6" fill="#bf5638"/><text x="560" y="100" font-size="12" fill="#3a3428" text-anchor="end" font-family="serif">安全网：保障基金</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第15章</div>
+        <div class="main-title">保险公司会不会破产？我的保单安全吗？<br>——偿付能力与保障基金</div>
+        </div>
+
+    <p>很多朋友问我：<br>“小公司的保险便宜，但万一倒闭了，我的保单还能赔吗？”<br>“听说有些保险公司被接管了，客户的保单怎么样了？”<br>“偿付能力充足率是什么？多少算安全？”</p>
+    <p>这些问题，都指向一个核心——<strong>我的保单到底有多安全？</strong><br>今天，我带你拆解保险公司的“安全网”：偿付能力监管、保险保障基金、以及历史上被接管公司的真实案例。</p>
+
+    <h2>一、一个精算师的真实故事：被接管的公司，客户一分钱没少</h2>
+    <p>几年前，某保险公司因激进投资和公司治理问题被监管接管。</p>
+    <p>消息一出，客户慌了：“我买了它的重疾险，是不是打水漂了？”</p>
+    <p>结果呢？监管指定另一家大型保险公司接手全部保单。客户的保障不变，理赔照常。唯一的变化是：保单上的公司名字换了。</p>
+    <p><strong>历史上被接管的新华保险、中华联合、安邦保险（现大家保险）、华夏人寿（现瑞众人寿）、天安人寿（现中汇人寿）等，所有客户的保单利益全部得到保障。</strong></p>
+    <div class="shuorenhua"><strong>说人话：</strong> 在中国，人寿保险合同的安全性极高。监管有一整套“治疗”体系——从限制业务、接管、到保障基金兜底。客户的保单利益始终放在第一位。</div>
+
+    <h2>二、核心原理：偿付能力——保险公司的“体检指标”</h2>
+    <h3>什么是偿付能力？</h3>
+    <p><strong>大白话：</strong> 偿付能力就是保险公司“赔不赔得起”的能力。如果所有客户同时来索赔，保险公司能不能拿出足够的钱？</p>
+    <p><strong>精算术语：</strong> 偿付能力是指保险公司履行赔偿或给付责任的能力。监管机构通过“偿二代”体系（C-ROSS，中国风险导向偿付能力体系）对保险公司进行监管。</p>
+    <h3>偿付能力充足率怎么算？</h3>
+    <p><strong>偿付能力充足率 = 实际资本 ÷ 最低资本 × 100%</strong><br>- <strong>实际资本</strong>：保险公司真正拥有的、可以自由支配的资本（包括股东投入、历年利润留存等）。<br>- <strong>最低资本</strong>：监管根据保险公司的业务规模和风险水平，要求它必须持有的最低资本。</p>
+    <h3>偿付能力的三个核心指标（偿二代二期）</h3>
+    <table>
+        <thead><tr><th>指标</th><th>监管要求</th><th>含义</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">核心偿付能力充足率</td><td>≥50%</td><td>核心资本 ÷ 最低资本。核心资本是质量最高的资本（如股东投入）。</td> </tr
+            <tr><td style="font-weight:600">综合偿付能力充足率</td><td>≥100%</td><td>实际全部资本 ÷ 最低资本。包括核心资本和附属资本（如次级债）。</td> </tr
+            <tr><td style="font-weight:600">风险综合评级</td><td>B类及以上</td><td>对公司整体风险的定性评价，分A、B、C、D四类。</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 综合偿付能力充足率≥100%是“及格线”，≥150%算“健康”。如果低于100%，监管就要“约谈、限制、整改”了。</div>
+
+    <h2>三、偿付能力不足的后果：监管的“阶梯式”工具箱</h2>
+    <p>监管对偿付能力不足的公司采取递进式措施：</p>
+    <table>
+        <thead><tr><th>严重程度</th><th>综合偿付能力充足率</th><th>监管措施</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">关注</td><td>120%-150%</td><td>监管约谈、风险提示、要求整改计划</td> </tr
+            <tr><td style="font-weight:600">警戒</td><td>100%-120%</td><td>限制分红、限制高管薪酬、限制新业务</td> </tr
+            <tr><td style="font-weight:600">不足</td><td>70%-100%</td><td>暂停新业务、限制投资、要求股东增资</td> </tr
+            <tr><td style="font-weight:600">严重不足</td><td><70%</td><td>接管、整顿、可能动用保险保障基金</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 监管不会等到公司破产才出手。从充足率降到120%开始，就已经在“盯着”了。大部分问题在早期就被控制住。</div>
+
+    <h2>四、中国保险业的“安全网”：保险保障基金</h2>
+    <h3>什么是保险保障基金？</h3>
+    <p><strong>大白话：</strong> 保险保障基金是行业的“互助救命钱”。每家公司按保费的一定比例缴纳。当有公司破产或濒临破产时，基金用来救助保单持有人。</p>
+    <p><strong>精算术语：</strong> 保险保障基金是根据《保险法》设立的行业风险救助基金，用于在保险公司被撤销或宣告破产时，向保单持有人提供救助。</p>
+    <h3>基金规模有多大？</h3>
+    <p>截至2025年底，保险保障基金规模已超过2000亿元。这笔钱专门用于“兜底”。</p>
+    <div class="insight-box">
+        💡 <strong>重要提示：</strong> 实际执行中，监管更倾向于通过“保单转让”方式，由接盘公司全额承担保单利益，保障基金对接盘公司提供资金支持。历史上所有被接管公司的人寿保单均得到100%兑付。
+    </div>
+    <div class="shuorenhua"><strong>说人话：</strong> 监管会尽力找其他公司接手，你的保单不会“打水漂”。过去二十年的所有案例，客户保单利益100%得到保障。</div>
+
+    <h2>五、历史上的接管案例：客户都怎么样了？</h2>
+    <table>
+        <thead><tr><th>公司</th><th>接管年份</th><th>处置结果</th><th>客户保单</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">新华保险</td><td>2007</td><td>中央汇金注资，后上市</td><td>全部正常兑付</td> </tr
+            <tr><td style="font-weight:600">中华联合</td><td>2009</td><td>引入战略投资者，重组</td><td>全部正常兑付</td> </tr
+            <tr><td style="font-weight:600">安邦保险（大家保险）</td><td>2018</td><td>新设大家保险承接</td><td>全部正常兑付</td> </tr
+            <tr><td style="font-weight:600">华夏人寿（瑞众人寿）</td><td>2020</td><td>新设瑞众人寿承接</td><td>全部正常兑付</td> </tr
+            <tr><td style="font-weight:600">天安人寿（中汇人寿）</td><td>2020</td><td>新设中汇人寿承接</td><td>全部正常兑付</td> </tr
+            <tr><td style="font-weight:600">恒大人寿（海港人寿）</td><td>2023</td><td>新设海港人寿承接</td><td>全部正常兑付</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 过去二十年，没有一例人寿保单因为保险公司破产而损失一分钱。这个记录至今保持。</div>
+
+    <h2>六、生活类比：银行有存款保险，保险有保障基金</h2>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>银行存款</strong>：50万以内，存款保险兜底。</li>
+        <li><strong>人寿保险</strong>：保障基金兜底，实际执行中保单利益100%保全。</li>
+    </ul>
+    <p>两者都是国家层面的安全网。保险的安全网同样坚固。</p>
+    <div class="alert-box">
+        ⚠️ <strong>特别提醒：</strong> 万能险、分红险中的“非保证部分”（如分红、超额结算利率）不属于保险合同的保证利益，不受保障基金救助。但保证部分（保底利率、现金价值）是安全的。
+    </div>
+
+    <h2>七、精算师视角：如何判断一家公司是否安全？</h2>
+    <p>作为消费者，你可以通过公开信息判断保险公司的安全性：</p>
+    <table>
+        <thead><tr><th>指标</th><th>安全范围</th><th>查询方式</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">综合偿付能力充足率</td><td>≥150%</td><td>公司官网“公开信息披露”→“偿付能力报告”</td> </tr
+            <tr><td style="font-weight:600">核心偿付能力充足率</td><td>≥75%</td><td>同上</td> </tr
+            <tr><td style="font-weight:600">风险综合评级</td><td>A或B</td><td>同上</td> </tr
+            <tr><td style="font-weight:600">股东背景</td><td>国企/大型民企/外资</td><td>公司官网“公司概况”</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>精算师提醒：</strong> 偿付能力不是越高越好。过高（如300%以上）可能意味着公司资金运用效率低，产品价格可能偏高。150%-250%是理想区间。</div>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th> </tr</thead>
+            <tbody>
+                <tr><td style="font-weight:600">偿付能力</td><td>Solvency</td><td>保险公司赔不赔得起的能力。</td> </tr
+                <tr><td style="font-weight:600">核心偿付能力充足率</td><td>Core Solvency Ratio</td><td>核心资本 ÷ 最低资本，要求≥50%。</td> </tr
+                <tr><td style="font-weight:600">综合偿付能力充足率</td><td>Comprehensive Solvency Ratio</td><td>全部资本 ÷ 最低资本，要求≥100%，建议≥150%。</td> </tr
+                <tr><td style="font-weight:600">风险综合评级</td><td>Integrated Risk Rating</td><td>A、B、C、D四类，B类及以上为达标。</td> </tr
+                <tr><td style="font-weight:600">保险保障基金</td><td>Insurance Guaranty Fund</td><td>行业互助的“救命钱”，规模超2000亿。</td> </tr
+                <tr><td style="font-weight:600">保单转让</td><td>Policy Transfer</td><td>破产后由其他公司接手保单，保障不变。</td> </tr
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="14-分红万能演示利率.html"><small>← 上一篇</small>第14章 · 分红险/万能险的演示利率可信吗</a><a class="next" href="16-行业未来.html"><small>下一篇 →</small>第16章(上) · 精算师眼中的行业未来</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

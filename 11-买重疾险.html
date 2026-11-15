@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第11章：如何用精算思维买重疾险</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="11">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html" class="on">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><path d="M320 44 L420 58 L420 104 Q420 136 370 150 Q320 136 320 104 Z" fill="#bf5638"/><path d="M370 96 q-8 -16 6 -20 q10 -2 12 8 q2 -10 12 -8 q14 4 6 20 q-8 12 -18 20 q-10 -8 -18 -20z" fill="#f5f1e6"/><rect x="120" y="66" width="160" height="58" rx="8" fill="#fffdf8" stroke="#e3d5b4" stroke-width="2.5"/><text x="200" y="90" font-size="13" fill="#3d7a66" text-anchor="middle" font-family="serif">先算缺口</text><text x="200" y="110" font-size="12" fill="#3a3428" text-anchor="middle" font-family="serif">收入×5～10年 + 负债</text><path d="M286 96 h28" stroke="#3d7a66" stroke-width="3"/><text x="370" y="163" font-size="12" fill="#bf5638" text-anchor="middle" font-family="serif">再定保额</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第11章</div>
+        <div class="main-title">如何用精算思维买重疾险？<br>——保额、期限、附加险的权衡</div>
+        </div>
+
+    <p>很多朋友问我：<br>“重疾险保额买30万还是50万？怎么算才够？”<br>“保到65岁和保终身，差多少钱？选哪个划算？”<br>“要不要加身故责任？要不要加多次赔付？”</p>
+    <p>这些问题，都指向一个核心——<strong>如何用精算思维，花最少的钱买到最需要的保障？</strong><br>今天，我带你像精算师一样思考：先算缺口，再比杠杆，最后做取舍。</p>
+
+    <h2>一、一个精算师的真实案例：30岁家庭支柱的配置方案</h2>
+    <p>去年，一位30岁的男性客户来找我。已婚，有一孩，房贷150万，年收入30万。</p>
+    <p>他问：“我该买多少重疾险？”</p>
+    <p>我帮他算了三笔账：</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>治疗康复费</strong>：癌症等大病，治疗+康复通常需要30-50万。医保能报一部分，但自费药、康复、营养、护工等，缺口约30万。</li>
+        <li><strong>收入损失</strong>：大病后通常需要3-5年休养，无法工作。年收入30万 × 3年 = 90万。</li>
+        <li><strong>家庭刚性支出</strong>：房贷、孩子教育、生活费等，每年约20万，3年就是60万。</li>
+    </ul>
+    <p>三项合计有重叠。精算师会这样算：<br><strong>合理保额 = 医疗备用金 + 3-5年年收入</strong><br>医疗备用金约30万，3年年收入约90万，合计120万。考虑到他已有50万公司团险，建议补充70万。</p>
+    <p>最终方案：<strong>70万保额，保至65岁，不含身故，分30年交</strong>。年保费约3600元。</p>
+    <p>他问我：“为什么不含身故？万一我没得重疾直接身故，不是白交了？”</p>
+    <p>我解释：身故责任本质是“寿险”。如果你已经单独买了定期寿险，就不需要重疾险再附加上。如果还没有任何身故保障，带身故责任的重疾险可以作为一种补充，优点是性价比高（捆绑购买往往比单独买重疾+定寿略便宜），缺点是重疾和身故共用保额，只能赔一次。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 重疾险的核心是解决“生病后没钱治、没收入”的问题。身故保障优先用定期寿险解决；如果没有定寿，带身故的重疾险可以临时顶上，但要清楚“二赔一”的限制。</div>
+
+    <h2>二、核心原则：先算缺口，再定保额</h2>
+    <h3>重疾险保额的“标准公式”</h3>
+    <p><strong>合理保额 = 医疗备用金 + 3-5年收入</strong></p>
+    <table>
+        <thead><tr><th>组成部分</th><th>估算方法</th><th>举例（年收入20万）</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">医疗备用金</td><td>30万（大病自费部分）</td><td>30万</td> </tr>
+            <tr><td style="font-weight:600">收入损失</td><td>年收入 × 3-5年</td><td>20万 × 3 = 60万</td> </tr>
+            </table>
+    <div class="table-caption">建议保额：两者相加 ≈ 90万</div>
+
+    <h3>不同人群的保额建议</h3>
+    <table>
+        <thead><tr><th>人群</th><th>保额下限</th><th>保额推荐</th><th>原因</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">家庭支柱（有房贷、孩子）</td><td>50万</td><td>年收入3-5倍</td><td>覆盖收入损失+医疗</td> </tr>
+            <tr><td style="font-weight:600">单身无负债</td><td>30万</td><td>50万</td><td>主要覆盖治疗康复</td> </tr>
+            <tr><td style="font-weight:600">小孩</td><td>30万</td><td>50万</td><td>治疗费+父母误工</td> </tr>
+            <tr><td style="font-weight:600">老人（50-55岁）</td><td>20万</td><td>30万</td><td>价格贵，杠杆低，可考虑防癌险</td> </tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 保额太低，出事时杯水车薪；保额太高，保费压得喘不过气。年收入的3-5倍是经验值。</div>
+
+    <h2>三、期限选择：保至65岁 vs 保终身？</h2>
+    <h3>为什么是65岁？</h3>
+    <p>重疾险的核心作用是覆盖<strong>工作期间</strong>的收入损失和家庭责任。65岁以后，大多数人已退休，孩子已成年，房贷基本还清。即使得重疾，对家庭财务的冲击远小于工作期间。<br><strong>精算理由：</strong> 65岁后重疾发生率虽然高，但保障的“边际价值”大幅下降。你把保至终身的溢价省下来自己储蓄，用于老年医疗，效率更高。</p>
+
+    <h3>保费对比（30岁男性，50万保额，不含身故）</h3>
+    <table>
+        <thead><tr><th>保障期限</th><th>年保费（约）</th><th>30年总保费</th><th>说人话</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">保至65岁</td><td>3000元</td><td>9万</td><td>最便宜，覆盖完整工作期</td> </tr>
+            <tr><td style="font-weight:600">保至70岁</td><td>3500元</td><td>10.5万</td><td>多5年保障，多花1.5万</td> </tr>
+            <tr><td style="font-weight:600">保至80岁</td><td>5500元</td><td>16.5万</td><td>多15年保障，多花7.5万</td> </tr>
+            <tr><td style="font-weight:600">保终身</td><td>7000元</td><td>21万</td><td>贵，但终身有保障</td> </tr>
+        </tbody>
+    </table>
+
+    <h3>精算师怎么选？</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>预算有限</strong>：保至65岁。覆盖工作期间责任，性价比最高。省下的钱可以自己投资或补充医疗险。</li>
+        <li><strong>预算充足</strong>：保终身。如果你希望终身有保障，且保费不影响生活，可以选终身。但要知道：65岁后保额的实际购买力已因通胀大幅缩水。</li>
+    </ul>
+
+    <h3>一个折中方案</h3>
+    <p><strong>“保至65岁 + 储蓄”组合</strong>：买保至65岁的重疾险，每年省下4000元（对比终身险的差价），自己投到稳健理财（比如国债、存款）。30年后，这笔钱约16-22万（按2%年化），可以作为老年医疗备用金。</p>
+    <div class="shuorenhua"><strong>精算理由：</strong> 资金的“机会成本”——把省下的保费用于投资，即使按2%年化，30年后也能积累一笔可观的医疗基金。而终身重疾险多交的保费，实际内部收益率（IRR）往往低于自己投资。<br><strong>说人话：</strong> 保终身不一定比“保定期+自己存钱”划算。动手算一下IRR，很多时候后者更优。</div>
+
+    <h2>四、缴费期的选择：越长越好</h2>
+    <h3>为什么缴费期越长越好？</h3>
+    <table>
+        <thead><tr><th>缴费期</th><th>年保费（30岁男，50万保额保至65岁）</th><th>总保费</th><th>优势</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">10年</td><td>约7000元</td><td>7万</td><td>总保费最低，但每年压力大</td> </tr>
+            <tr><td style="font-weight:600">20年</td><td>约4000元</td><td>8万</td><td>适中</td> </tr>
+            <tr><td style="font-weight:600">30年</td><td>约3000元</td><td>9万</td><td>每年压力最小，且豁免更容易触发</td> </tr>
+        </tbody>
+    </table>
+    <p><strong>精算理由有三：</strong></p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>货币时间价值</strong>：未来交的钱，因通货膨胀和投资机会，实际购买力更低。同样的金额，交得越晚越“便宜”。</li>
+        <li><strong>豁免杠杆</strong>：如果缴费期内患轻症/中症，后续保费全免。缴费期越长，豁免触发的概率越高，对客户越有利。</li>
+        <li><strong>现金流压力</strong>：保险是长期规划，降低年缴保费可以避免“买得起养不起”。省下的钱可以用于其他投资或保障。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 能选30年就别选20年，能选20年就别选10年。别怕“总保费多了一点”——那些未来的钱，放在现在真不值那么多。</div>
+
+    <h2>五、附加险的取舍：哪些值得加？</h2>
+    <p>重疾险的附加险五花八门：身故责任、多次赔付、癌症二次赔、心脑血管二次赔、投保人豁免、轻症/中症豁免……哪些是“刚需”，哪些是“锦上添花”？</p>
+    <table>
+        <thead><tr><th>附加险</th><th>加费比例（相对基础）</th><th>是否值得</th><th>理由</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">身故责任</td><td>+20%-50%</td><td>⚠️ <strong>看情况</strong></td><td>已购定期寿险则不加；无身故保障可考虑，优点是捆绑性价比高，缺点是重疾和身故只赔一次</td> </tr>
+            <tr><td style="font-weight:600">多次赔付（分组）</td><td>+15%-25%</td><td>⚠️ 看情况</td><td>年轻人、预算足可加；中老年意义不大</td> </tr>
+            <tr><td style="font-weight:600">癌症二次赔</td><td>+10%-15%</td><td>✅ 值得</td><td>癌症复发/转移/新发概率高，加费不高</td> </tr>
+            <tr><td style="font-weight:600">心脑血管二次赔</td><td>+5%-10%</td><td>⚠️ 看情况</td><td>男性、有家族史可加</td> </tr>
+            <tr><td style="font-weight:600">投保人豁免</td><td>+3%-5%</td><td>✅ 值得</td><td>夫妻互保或给小孩买，性价比高</td> </tr>
+            <tr><td style="font-weight:600">轻症/中症豁免</td><td>通常自带</td><td>✅ 值得</td><td>得轻症后不用交后续保费，保障继续</td> </tr>
+        </tbody>
+    </table>
+
+    <h3>关于身故责任的选择</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>如果你已经购买了定期寿险</strong>（保额覆盖房贷、子女教育等）：不需要重疾险附加身故。重疾险专注于疾病保障，身故交给定寿，两者互不干扰，且定寿更便宜。</li>
+        <li><strong>如果你没有任何身故保障，且预算有限</strong>：带身故责任的重疾险可以作为一个“二合一”方案。它的优点是捆绑购买往往比单独买重疾+定寿略便宜，手续简单；缺点是重疾和身故共用保额，赔了重疾后身故不再赔。</li>
+        <li><strong>精算建议</strong>：对于家庭支柱，建议优先配置一份定期寿险（100万保额，年保费约1000元），然后再买不含身故的重疾险。这样重疾赔完，定寿依然有效。</li>
+    </ul>
+
+    <h3>精算师推荐</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>值得加的</strong>：轻症/中症豁免（多数产品自带）、癌症二次赔、投保人豁免</li>
+        <li><strong>看情况加的</strong>：身故责任（根据有无定期寿险）、心脑血管二次赔</li>
+        <li><strong>可以不加的</strong>：多次赔付（除非预算充足且年轻）</li>
+    </ul>
+
+    <h2>六、给你的行动指南：五步选对重疾险</h2>
+    <table>
+        <thead><tr><th>步骤</th><th>做什么</th><th>精算思维</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">1. 算缺口</td><td>医疗备用金30万 + 3-5年年收入</td><td>保额要够用，不盲目追高</td> </tr>
+            <tr><td style="font-weight:600">2. 定期限</td><td>优先保至65岁，有余钱再考虑终身</td><td>覆盖工作责任期，杠杆最大化</td> </tr>
+            <td><td style="font-weight:600">3. 选缴费</td><td>选最长缴费期（20/30年）</td><td>降低年压力，多享豁免，利用货币时间价值</td> </tr>
+            <tr><td style="font-weight:600">4. 挑附加</td><td>值得加：豁免、癌症二次；身故视定寿情况</td><td>各司其职，不重复购买</td> </tr>
+            <tr><td style="font-weight:600">5. 定产品</td><td>对比预定利率、发生率、费用率</td><td>同等保障选三元素优的</td> </tr>
+        </tbody>
+    </table>
+
+    <h3>实操检查清单</h3>
+    <div class="action-tips">
+        <p>□ 保额是否达到年收入3-5倍？<br>
+        □ 保至65岁的保费是否在年收入5%以内？<br>
+        □ 是否选择了最长缴费期（20年或30年）？<br>
+        □ 是否已单独配置定期寿险？如没有，是否考虑带身故责任的重疾险？<br>
+        □ 附加险中是否包含了癌症二次赔？<br>
+        □ 保险公司的偿付能力是否≥150%？</p>
+    </div>
+
+    <h2>七、精算师提醒：三个常见误区</h2>
+    <h3>误区1：“给孩子买终身重疾险，越早越便宜”</h3>
+    <p>孩子买终身重疾确实便宜（0岁女宝，50万保额，年保费约2000元）。但问题是：孩子65岁后，50万保额还能值多少钱？按2%通胀，65年后只相当于现在的约15万。</p>
+    <div class="shuorenhua"><strong>精算建议：</strong> 给孩子买保30年或至65岁即可，省下的钱自己投资。等孩子成年后自己补充。</div>
+
+    <h3>误区2：“缴费期越短越好，总保费更少”</h3>
+    <p>很多人算账：“10年交总保费7万，30年交总保费9万，多了2万，不划算！”<br>这是忽略了<strong>货币的时间价值</strong>。未来交的钱，因为通胀和投资机会，实际购买力远低于现在。按2%折现，30年后交的1万元，今天只值约5520元。把30年各期保费折现后加总，实际上并不比10年交高多少。</p>
+    <p><strong>精算事实：</strong> 拉长缴费期还能享受“保费豁免”福利——万一缴费期内患轻症，后续所有保费都不用交了。缴费期越长，豁免概率越高，对客户越有利。</p>
+    <div class="shuorenhua"><strong>精算建议：</strong> 除非你现金流极其充裕且高龄（50岁以上），否则一律选最长缴费期。</div>
+
+    <h3>误区3：“多次赔付一定比单次好”</h3>
+    <p>多次赔付确实有它的价值，但精算师会问：加费25%，你愿意吗？从实际数据看，大多数人一生只会得一次重疾。把预算花在首次保额上，比赌“二次”更理性。</p>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th> </tr</thead>
+            <tbody>
+                <tr><td style="font-weight:600">医疗备用金</td><td>Medical Reserve</td><td>大病治疗康复的自费部分，约30万。</td> </tr>
+                <tr><td style="font-weight:600">收入损失</td><td>Income Loss</td><td>因病无法工作造成的收入缺口，按3-5年算。</td> </tr>
+                <tr><td style="font-weight:600">保额</td><td>Sum Assured</td><td>出事时保险公司赔付的金额。</td> </tr>
+                <tr><td style="font-weight:600">保障期限</td><td>Coverage Period</td><td>建议保至65岁，覆盖工作责任期。</td> </tr>
+                <tr><td style="font-weight:600">缴费期</td><td>Premium Payment Period</td><td>越长越好，降低年压力，提升豁免价值。</td> </tr>
+                <tr><td style="font-weight:600">身故责任</td><td>Death Benefit</td><td>重疾险附加的死亡赔付；已购定寿则不加，否则可考虑（优点是捆绑便宜，缺点是二赔一）。</td> </tr>
+                <tr><td style="font-weight:600">癌症二次赔</td><td>Cancer Recurrence Benefit</td><td>癌症复发/转移/新发可再赔一次，值得加。</td> </tr>
+                <tr><td style="font-weight:600">投保人豁免</td><td>Premium Waiver</td><td>投保人出事，后续保费不用交。</td> </tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="10-产品停售的真相.html"><small>← 上一篇</small>第10章 · 产品停售的真相</a><a class="next" href="12-百万医疗险.html"><small>下一篇 →</small>第12章 · 百万医疗险为什么这么便宜</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

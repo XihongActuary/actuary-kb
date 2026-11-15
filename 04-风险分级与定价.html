@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第4章：风险分级与定价</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="04">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html" class="on">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画：风险分级"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="130" y="70" width="140" height="76" rx="12" fill="#fffdf6" stroke="#e3d5b4" stroke-width="2"/><circle cx="200" cy="97" r="12" fill="#3d7a66"/><rect x="184" y="112" width="32" height="22" rx="10" fill="#3d7a66"/><text x="200" y="166" font-size="13" fill="#3a3428" text-anchor="middle" font-family="serif">标准体</text><rect x="270" y="70" width="140" height="76" rx="12" fill="#fffdf6" stroke="#e3d5b4" stroke-width="2"/><circle cx="340" cy="97" r="12" fill="#c98f2b"/><rect x="324" y="112" width="32" height="22" rx="10" fill="#c98f2b"/><text x="340" y="166" font-size="13" fill="#3a3428" text-anchor="middle" font-family="serif">次标准体</text><rect x="410" y="70" width="140" height="76" rx="12" fill="#fffdf6" stroke="#e3d5b4" stroke-width="2"/><circle cx="480" cy="97" r="12" fill="#bf5638"/><rect x="464" y="112" width="32" height="22" rx="10" fill="#bf5638"/><text x="480" y="166" font-size="13" fill="#3a3428" text-anchor="middle" font-family="serif">高风险体</text><text x="340" y="56" font-size="14" fill="#3a3428" text-anchor="middle" font-family="serif" letter-spacing="2">风险因子不同，价格因人而异</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第4章</div>
+        <div class="main-title">风险不是“坏运气”<br>——精算师如何给风险定价？</div>
+        </div>
+
+    <p>很多朋友问我：<br>“为什么我和同事买同一款重疾险，我的保费比他贵？”<br>“吸烟和不吸烟，保费真的差很多吗？差多少？”<br>“保险公司怎么知道我有脂肪肝？它凭什么给我加费？”</p>
+    <p>这些问题，都指向一个核心——<strong>精算师如何判断你是“高风险”还是“低风险”？</strong><br>今天，我带你拆解保险定价的第三个基石：<strong>风险分级与风险定价</strong>。</p>
+
+    <h2>一、一个精算师的真实案例：吸烟与不吸烟，保费差多少？</h2>
+    <p>几年前，一位30岁的男性客户来咨询定期寿险。<br>他身体健康，不吸烟，体重正常。另一家保险公司的报价让他很困惑——为什么同样保额、同样期限，他朋友（也30岁，但每天一包烟）的保费比他贵了将近一倍？</p>
+    <p>我给他看了精算师的风险定价逻辑：</p>
+    <div class="insight-box">
+        📊 <strong>不吸烟者</strong>：30岁男性年死亡率≈0.0006（万分之六）<br>
+        🚬 <strong>重度吸烟者</strong>：30岁男性年死亡率≈0.0012（万分之十二），是前者的2倍<br><br>
+        纯保费 = 保额 × 死亡率<br>
+        同样100万保额：<br>
+        - 不吸烟者纯保费≈600元/年<br>
+        - 吸烟者纯保费≈1200元/年<br><br>
+        再加上附加费，最终保费差距可能就是近一倍。
+    </div>
+    <p><strong>这就是精算师的风险定价：根据风险高低，收取不同保费。风险越高，保费越贵。</strong></p>
+
+    <h2>二、核心原理：风险分级——把人群“分门别类”</h2>
+    <h3>什么是风险分级？</h3>
+    <p><strong>大白话：</strong> 保险公司把投保人按照风险大小分成不同的“等级”，每个等级收不同的钱。风险越高，收得越多。</p>
+    <p><strong>精算术语：</strong> 风险分级（Risk Classification）是指保险公司根据被保险人的风险特征，将其划分为不同风险组别，并为每个组别设定相应费率的过程。其目的是使保费与风险相匹配，避免低风险人群补贴高风险人群。</p>
+
+    <h3>为什么需要风险分级？</h3>
+    <p>如果保险公司对所有30岁男性收同样的保费，会发生什么？</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li>健康的人觉得“我身体好，买保险不划算”，可能不买。</li>
+        <li>高风险的人觉得“我身体差，赶紧买”，纷纷投保。</li>
+        <li>结果保险公司收到的保费不够赔，亏损，最后只能对所有人大幅涨价。</li>
+        <li>健康的人更不买了……<strong>恶性循环</strong>，最终保险计划崩溃。</li>
+    </ul>
+    <p>这在精算里叫<strong>逆向选择</strong>（Adverse Selection）。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 风险分级是为了防止“好人补贴坏人”，让每个人按自己的风险水平付费，这样保险市场才能健康运转。</div>
+
+    <h2>三、不同险种，关注的风险因子完全不同</h2>
+    <p>精算师在给保险定价时，<strong>不是所有险种都用同一套风险因子</strong>。不同险种保障的风险不同，关注的重点也完全不同。</p>
+    <table>
+        <thead><tr><th>险种类型</th><th>保障什么风险</th><th>最关注的风险因子</th><th>不太关注的因素</th></tr></thead>
+        <tbody>
+            <tr><td><strong>养老年金</strong></td><td>活得太久，钱不够花</td><td>长寿风险（死亡率低）、利率</td><td>健康状况（除非极差）</td></tr>
+            <tr><td><strong>定期/终身寿险</strong></td><td>死得太早，家人失去收入</td><td>死亡率、年龄、吸烟、职业</td><td>一般健康状况（轻度异常影响小）</td></tr>
+            <tr><td><strong>重疾险</strong></td><td>生大病，治疗康复费用</td><td>发病率、年龄、吸烟、家族病史、已有疾病</td><td>职业（除非极端高危）</td></tr>
+            <tr><td><strong>医疗险</strong></td><td>看病住院费用</td><td>健康状况、既往病史、年龄</td><td>职业（轻度高危也可保）</td></tr>
+            <tr><td><strong>意外险</strong></td><td>意外导致的身故/伤残</td><td><strong>职业类别</strong>（风险等级1-6级）</td><td>健康状况（基本不核保）</td></tr>
+        </tbody>
+    </table>
+
+    <h3>养老年金：最怕你活得太久</h3>
+    <p>养老年金是“活得越久，领得越多”。对保险公司来说，<strong>长寿是风险</strong>。所以精算师关注的是：你的死亡率是不是比平均水平低（即你更可能长寿）。健康状况良好的人，反而更受养老年金欢迎——不会加费，甚至可能费率更优。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 买养老年金，身体好不是坏事。保险公司巴不得你活到120岁？不，它其实怕你活太久，但不会因为你健康就涨价。</div>
+
+    <h3>意外险：职业类别决定一切</h3>
+    <p>意外险保的是“意外”，跟身体健康关系不大，但跟<strong>你干什么工作</strong>关系极大。<br>保险公司把职业分为1-6级：</p>
+    <table>
+        <thead><tr><th>职业类别</th><th>风险等级</th><th>典型职业</th><th>保费水平</th></tr></thead>
+        <tbody>
+            <tr><td>1类</td><td>极低风险</td><td>办公室文员、教师</td><td>基准保费</td></tr>
+            <tr><td>2类</td><td>低风险</td><td>外勤销售、司机</td><td>基准或略高</td></tr>
+            <tr><td>3类</td><td>中等风险</td><td>一般工人、警察</td><td>基准1.2-1.5倍</td></tr>
+            <tr><td>4类</td><td>较高风险</td><td>出租车司机、快递员</td><td>基准1.5-2倍</td></tr>
+            <tr><td>5类</td><td>高风险</td><td>高空作业、刑警</td><td>基准2-3倍</td></tr>
+            <tr><td>6类</td><td>极高风险</td><td>矿工、特警、消防员</td><td>可能拒保或极高保费</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 买意外险，保险公司不问你抽烟喝酒，只问你“干什么工作的”。坐办公室和爬电线杆，保费能差好几倍。</div>
+
+    <h3>健康险（重疾/医疗）：健康是唯一的核心</h3>
+    <p>重疾险和医疗险，最关注的就是你的<strong>身体健康状况</strong>。年龄、吸烟、体重、血压、血糖、结节、家族病史……每一个小问题都可能影响保费。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 买健康险，保险公司恨不得把你从头到脚查一遍。因为你生病的风险，直接决定它赔不赔钱。</div>
+
+    <h2>四、精算师怎么判断健康风险？——常见风险因子</h2>
+    <p>以健康险（重疾险、医疗险）为例，精算师会分析大量数据，找出哪些因素与发病率、死亡率显著相关。这些因素就是<strong>风险因子</strong>。</p>
+    <table>
+        <thead><tr><th>风险因子</th><th>如何影响保费</th><th>典型加费比例（相对标准体）</th></tr></thead>
+        <tbody>
+            <tr><td><strong>年龄</strong></td><td>年龄越大，发病率越高</td><td>每增加1岁，保费约涨3%-8%</td></tr>
+            <tr><td><strong>性别</strong></td><td>女性某些重疾（如乳腺癌）发病率高，男性心脑血管更高</td><td>不同产品差异大</td></tr>
+            <tr><td><strong>吸烟</strong></td><td>吸烟大幅增加癌症、心血管疾病风险</td><td>加费50%-100%</td></tr>
+            <tr><td><strong>体重（BMI）</strong></td><td>BMI>30或<18.5，风险上升</td><td>加费20%-50%</td></tr>
+            <tr><td><strong>血压</strong></td><td>高血压增加心脑血管疾病风险</td><td>轻度加费10%-30%，重度可能拒保</td></tr>
+            <tr><td><strong>血糖</strong></td><td>糖尿病或糖耐量异常</td><td>加费50%-200%，严重拒保</td></tr>
+            <tr><td><strong>已有疾病</strong></td><td>如甲状腺结节、脂肪肝、乙肝携带等</td><td>视情况加费、除外责任或拒保</td></tr>
+            <tr><td><strong>家族病史</strong></td><td>直系亲属早发癌症、心脏病等</td><td>加费10%-50%</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 精算师不靠感觉，靠数据说话。几十年的理赔数据告诉精算师：吸烟、超重、高血压……这些确实会让你更容易出事，所以保费更贵。</div>
+
+    <h2>五、风险定价的结果：标准体、次标准体、拒保体</h2>
+    <p>根据风险因子的综合评估，保险公司会把客户分成几类（以健康险为例）：</p>
+    <table>
+        <thead><tr><th>类别</th><th>定义</th><th>保费水平</th><th>典型人群</th></tr></thead>
+        <tbody>
+            <tr><td><strong>优选体</strong></td><td>风险显著低于平均水平</td><td>比标准体便宜10%-30%</td><td>不吸烟、BMI正常、血压血糖完美、无家族病史</td></tr>
+            <tr><td><strong>标准体</strong></td><td>风险处于平均水平</td><td>基准费率</td><td>健康但有小瑕疵（如轻度脂肪肝、轻微超重）</td></tr>
+            <tr><td><strong>次标准体</strong></td><td>风险高于平均水平</td><td>加费20%-200%</td><td>吸烟、高血压控制良好、乙肝携带、中度肥胖</td></tr>
+            <tr><td><strong>拒保体</strong></td><td>风险过高，无法承保</td><td>拒保或延期</td><td>严重心脏病、糖尿病并发症、晚期癌症</td></tr>
+            <tr><td><strong>除外责任体</strong></td><td>特定风险过高，但其他正常</td><td>标准保费，但某疾病不赔</td><td>甲状腺结节（甲状腺癌除外）、乳腺结节（乳腺癌除外）</td></tr>
+        </tbody>
+    </table>
+
+    <h3>举例：不同吸烟状况对定期寿险保费的影响（30岁男性，100万保额，20年期）</h3>
+    <table>
+        <thead><tr><th>吸烟状况</th><th>年保费（约）</th><th>比不吸烟者贵</th></tr></thead>
+        <tbody>
+            <tr><td>不吸烟</td><td>800元</td><td>——</td></tr>
+            <tr><td>偶尔吸烟（每周几支）</td><td>1200元</td><td>50%</td></tr>
+            <tr><td>每天半包</td><td>1500元</td><td>88%</td></tr>
+            <tr><td>每天1包以上</td><td>1800元</td><td>125%</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 吸烟不仅伤身体，还伤钱包。戒烟后一般需要1-2年无吸烟史，才能按“不吸烟”费率投保。</div>
+
+    <h2>六、精算师视角：风险定价不是“歧视”，而是“公平”</h2>
+    <p>有人会问：“这不就是歧视吗？凭什么胖的人就要多交钱？”</p>
+    <p><strong>精算师的理解是：</strong> 保险的本质是风险分摊。如果让低风险的人和高风险的人付同样的保费，低风险的人就在补贴高风险的人。久而久之，低风险的人会退出，导致保险计划瓦解。</p>
+    <p><strong>风险定价追求的是“公平”——每个人的保费反映了他/她带来的真实风险。</strong></p>
+    <p>当然，监管也会防止不合理的风险分级。比如，不能基于种族、民族、宗教信仰等非风险因素进行定价。中国的监管规定，保险公司在风险分级时必须使用与风险有直接统计学关联的因子，并定期报备。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 精算师不是嫌你胖，而是数据证明胖确实容易生病。如果不让你多交钱，对健康的瘦子不公平。</div>
+
+    <h2>七、生活类比：车险的驾驶行为分级</h2>
+    <p>车险是风险分级最典型的例子。</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>安全驾驶者</strong>：多年无违章、无事故，保费很低（甚至打折）。</li>
+        <li><strong>偶尔违章者</strong>：有过几次超速，保费上浮20%。</li>
+        <li><strong>事故频发者</strong>：一年出险多次，保费可能翻倍甚至被拒保。</li>
+    </ul>
+    <p>保险公司通过驾驶记录、年龄、车型、行驶里程等判断风险。精算师的工作类似，只不过评估的是你的<strong>健康风险</strong>（对健康险）或<strong>职业风险</strong>（对意外险）或<strong>长寿风险</strong>（对养老年金）。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 寿险/重疾险的风险分级，就像车险的“驾驶行为评分”。</div>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td>风险分级</td><td>Risk Classification</td><td>把人群按风险大小分等级，不同等级不同价格。</td></tr>
+                <tr><td>风险定价</td><td>Risk-based Pricing</td><td>高风险多交钱，低风险少交钱。</td></tr>
+                <tr><td>风险因子</td><td>Risk Factor</td><td>影响风险大小的因素，如年龄、吸烟、职业。</td></tr>
+                <tr><td>逆向选择</td><td>Adverse Selection</td><td>高风险的人更想买保险，导致保险计划失衡。</td></tr>
+                <tr><td>标准体</td><td>Standard Risk</td><td>风险处于平均水平的人群。</td></tr>
+                <tr><td>次标准体</td><td>Substandard Risk</td><td>风险高于平均水平，需要加费的人群。</td></tr>
+                <tr><td>除外责任</td><td>Exclusion</td><td>对特定疾病不承担赔付责任。</td></tr>
+                <tr><td>职业类别</td><td>Occupational Class</td><td>意外险最核心的风险因子，分1-6级。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="03-利息与折现.html"><small>← 上一篇</small>第3章 · 利息与折现</a><a class="next" href="05-不确定性vs风险.html"><small>下一篇 →</small>第5章 · 不确定性 vs 风险</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

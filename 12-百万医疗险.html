@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第12章：百万医疗险为什么这么便宜</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="12">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html" class="on">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host .alert-box{
+            background-color: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #7f1a1a;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="140" y="96" width="400" height="50" rx="8" fill="#e3d5b4"/><rect x="140" y="96" width="120" height="50" rx="8" fill="#bf5638"/><text x="200" y="127" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">免赔额</text><text x="420" y="127" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">超过部分，保险报</text><path d="M300 44 q60 -26 120 0 l0 10 q-60 -22 -120 0 z" fill="#3d7a66"/><line x1="360" y1="52" x2="360" y2="72" stroke="#3d7a66" stroke-width="4"/></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第12章</div>
+        <div class="main-title">百万医疗险为什么这么便宜？<br>——免赔额与赔付率的关系</div>
+        </div>
+
+    <p>很多朋友问我：<br>“百万医疗险一年才几百块，保额却有几百万，保险公司怎么赚钱？”<br>“1万免赔额是什么意思？是不是小病都不赔？”<br>“保证续保20年和一年期产品，到底哪个好？”</p>
+    <p>这些问题，都指向一个核心——<strong>百万医疗险的精算逻辑：用高免赔额筛掉小赔案，只保大额医疗支出。</strong><br>今天，我带你拆解百万医疗险的定价秘密，教你如何选对产品。同时，我会帮你理清<strong>百万医疗险和重疾险的区别</strong>，告诉你不同人群该怎么选。</p>
+
+    <h2>一、一个精算师的真实案例：我设计的一款百万医疗险</h2>
+    <p>几年前，我参与设计过一款百万医疗险。<br>产品经理希望做到“保费便宜、保额高、能爆量”。精算团队给出的方案是：<strong>设置1万元免赔额</strong>。</p>
+    <p>为什么是1万？<br>我们拉了一组行业数据：在社保报销后，个人自付医疗费超过1万元的比例，约占总住院人次的20%。也就是说，80%的住院赔案（如感冒、阑尾炎、小手术）自付金额都在1万以下。</p>
+    <p><strong>设置1万免赔额，直接筛掉了80%的小额赔案。</strong><br>- 没有免赔额：每年要赔大量小案件，保费至少需要1500-2000元。<br>- 1万免赔额：只赔大额案件，保费可以压到300-500元。</p>
+    <p>客户问：“那我买了保险，小病住院用不上，是不是亏了？”<br>我解释：百万医疗险的设计初衷是“保灾难性医疗支出”，不是保小病。就像车险，你可以选5000免赔额，保费便宜一半。小剐蹭自己修，大事故保险公司赔。这样才划算。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 百万医疗险就是“大病保护伞”。自付1万以内的自己承担，超出1万的由保险公司兜底。保费便宜，是因为你自担了第一道风险。</div>
+
+    <h2>二、核心原理：免赔额如何影响保费？</h2>
+    <h3>什么是免赔额？</h3>
+    <p><strong>大白话：</strong> 免赔额就是你自掏腰包的部分。超过免赔额的部分，保险公司才赔。<br><strong>精算术语：</strong> 免赔额（Deductible）是指保险合同中约定的，由被保险人自行承担的损失金额。保险公司仅对超过免赔额的部分承担赔付责任。</p>
+
+    <h3>免赔额与保费的关系（示意）</h3>
+    <p>以某款百万医疗险为例，30岁男性，保额200万：</p>
+    <table>
+        <thead><tr><th>免赔额</th><th>年保费</th><th>相对0免赔的保费比例</th><th>赔付概率（年）</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">0元</td><td>约1500元</td><td>100%</td><td>约15%（含小病）</td> </tr
+            <tr><td style="font-weight:600">5000元</td><td>约800元</td><td>53%</td><td>约8%</td> </tr
+            <tr><td style="font-weight:600">1万元</td><td>约400元</td><td>27%</td><td>约4%</td> </tr
+            <tr><td style="font-weight:600">2万元</td><td>约250元</td><td>17%</td><td>约2%</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 免赔额越高，保费越便宜。1万免赔额是市场主流，在“便宜”和“实用”之间取得了平衡。</div>
+
+    <h2>三、百万医疗险 vs 重疾险：核心区别</h2>
+    <p>很多人把百万医疗险和重疾险混为一谈，其实它们完全不同。</p>
+    <table>
+        <thead><tr><th>维度</th><th>百万医疗险</th><th>重疾险</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">赔付方式</td><td>报销型。花多少报多少，不超过实际医疗费。</td><td>给付型。确诊即赔约定保额，不管你怎么花。</td> </tr
+            <tr><td style="font-weight:600">赔付金额</td><td>最高几百万，但实际报销不超过医疗费。</td><td>固定保额（如50万），一次性到账。</td> </tr
+            <tr><td style="font-weight:600">用途</td><td>覆盖住院、手术、药品等医疗费用。</td><td>覆盖治疗费 + 收入损失 + 康复营养。</td> </tr
+            <tr><td style="font-weight:600">保障期限</td><td>通常一年期，保证续保最长20年。</td><td>长期险，可保至65岁/70岁/终身。</td> </tr
+            <tr><td style="font-weight:600">保费特点</td><td>年轻便宜（几百元），随年龄上涨。</td><td>均衡保费，每年固定，年轻时相对贵。</td> </tr
+            <tr><td style="font-weight:600">适合人群</td><td>所有人，尤其预算有限或高龄人群。</td><td>家庭支柱、有收入损失风险的人。</td> </tr
+        </tbody>
+    </table>
+    <div class="insight-box">
+        📌 <strong>精算师一句话概括</strong><br>
+        百万医疗险报销你的“看病钱”，重疾险补偿你的“养家钱”。
+    </div>
+    <p><strong>举例：</strong> 30岁男性确诊癌症，治疗花了30万（社保报销后自费20万），并且需要休养3年无法工作（年收入20万）。<br>- 百万医疗险：报销自费的20万医疗费。<br>- 重疾险（50万保额）：一次性给50万，你拿20万付医疗费，剩下30万当生活费。<br>两者搭配，才能既解决“看病贵”，又解决“收入断”。</p>
+
+    <h2>四、不同人群怎么选？——精算师建议</h2>
+    <table>
+        <thead><tr><th>人群特征</th><th>优先选择</th><th>理由</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">预算非常有限（年保费预算<1000元）</td><td>百万医疗险</td><td>几百元就能覆盖大病医疗费，杠杆极高。</td> </tr
+            <tr><td style="font-weight:600">高龄（55岁以上）且没有任何健康险</td><td>百万医疗险</td><td>重疾险价格已极贵（杠杆低），百万医疗险仍可投保（注意健康告知）。</td> </tr
+            <tr><td style="font-weight:600">青年（20-40岁）且有一定购买力</td><td>重疾险为主，百万医疗为辅</td><td>重疾险可以补偿收入损失，保障工作期间的财务安全。百万医疗险做补充报销。</td> </tr
+            <tr><td style="font-weight:600">家庭支柱（有房贷、孩子）</td><td>重疾险必须配足</td><td>一旦大病，不仅医疗费，收入中断对家庭打击更大。</td> </tr
+            <tr><td style="font-weight:600">已有重疾险但保额不足</td><td>加一份百万医疗险</td><td>用低成本提升医疗费用保障。</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>精算师特别提醒：</strong><br>钱少先买百万医疗，几百块就能防止“因病返贫”。有点余力了，一定要配重疾险，因为大病最可怕的不是花钱，是赚不到钱。<br>最佳组合：百万医疗险（报销医疗费） + 重疾险（补偿收入损失）。两者各司其职，缺一不可。</div>
+
+    <h2>五、⚠️ 重要提醒：超便宜的百万医疗险，小心隐藏的“坑”</h2>
+    <div class="alert-box">
+        <strong>🚨 精算师提醒：碰到“地板价”产品（30岁只要100多块甚至几十块），一定要擦亮眼睛，看两个关键点：</strong><br><br>
+        1️⃣ <strong>免赔额是否虚高</strong>：有些产品免赔额2万、3万甚至更高。免赔额越高，你越难用到。2万免赔意味着社保报销后，自付超过2万的部分才赔。大多数人住院自付很难超过2万。<br><br>
+        2️⃣ <strong>给付比例是否低</strong>：有些产品写着“赔付比例80%”或“社保报销后剩余部分赔付比例50%”。这意味着即使超过免赔额，你还要自担20%-50%的费用。
+    </div>
+
+    <h3>举例对比</h3>
+    <table>
+        <thead><tr><th>产品</th><th>年保费</th><th>免赔额</th><th>给付比例</th><th>真实保障效果</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">正常产品</td><td>400元</td><td>1万</td><td>100%</td><td>自付超过1万的部分全赔</td> </tr
+            <tr><td style="font-weight:600">隐藏坑产品</td><td>150元</td><td>2万</td><td>80%</td><td>自付超过2万的部分只赔80%，你还要自掏20%</td> </tr
+        </tbody>
+    </table>
+    <p>假设你住院自付（社保后）花了3万元：<br>- 正常产品赔：3万 - 1万 = 2万（全赔），你只掏1万。<br>- 隐藏坑产品赔：(3万 - 2万) × 80% = 8000元，你自己要掏3万 - 8000 = 2.2万。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 别只看保费数字。免赔额、给付比例、是否保证续保，这三个比价格更重要。太便宜的，往往在你看不见的地方“省”了。</div>
+
+    <h2>六、百万医疗险的定价逻辑：赔付率与费用率</h2>
+    <p>精算师在设计百万医疗险时，核心关注两个指标：</p>
+    <h3>1. 赔付率（Loss Ratio）</h3>
+    <p><strong>赔付率 = 实际赔款 ÷ 所收保费</strong><br>- 赔付率太低：保费收多了，客户不划算<br>- 赔付率太高：保险公司亏钱，产品可能停售或涨价<br>- 合理区间：60%-80%（不同公司策略不同）</p>
+    <h3>2. 费用率（Expense Ratio）</h3>
+    <p><strong>费用率 = 运营成本 ÷ 所收保费</strong><br>- 包括：佣金、核保、客服、IT、再保险等<br>- 互联网产品费用率约10%-20%<br>- 代理人渠道产品费用率约20%-35%</p>
+    <div class="insight-box">
+        📊 <strong>百万医疗险的盈亏平衡（简化）</strong><br>
+        保费 = 赔款 + 费用 + 利润 → 100% = 赔付率 + 费用率 + 利润率<br>
+        假设某产品：赔付率75%，费用率15%，利润率10%，这样就能正常运转。
+    </div>
+    <div class="shuorenhua"><strong>说人话：</strong> 你交400元保费，其中300元赔给生病的人，60元给保险公司付工资房租，40元是利润和备用金。很合理。</div>
+
+    <h2>七、为什么百万医疗险能“保几百万”？</h2>
+    <p>很多朋友担心：“我一年交400块，真住院花100万，保险公司赔得起吗？”<br>精算师的答案是：<strong>因为大数法则和概率极低。</strong></p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li>免赔额1万筛掉了80%的小赔案</li>
+        <li>超过1万的部分，大部分人实际花费在几万到几十万</li>
+        <li>真正花到上百万的概率极低（比如重症ICU、器官移植、昂贵靶向药）</li>
+        <li>保险公司通过再保险将极端风险分散</li>
+    </ul>
+    <p><strong>举个例子：</strong> 100万人投保，每人400元，总保费4亿。预期每年约有4%的人（4万人）理赔，扣除免赔额后人均赔款约3000元，总赔款约1.2亿。加上费用和利润，4亿保费绰绰有余。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 几百万保额是给你“万一”用的，精算师算过，真正用到几百万的人凤毛麟角。保费是按平均风险定的，不是按最高风险定的。</div>
+
+    <h2>八、保证续保 vs 不保证续保：哪个更值得？</h2>
+    <p>这是百万医疗险最关键的坑。</p>
+    <table>
+        <thead><tr><th>维度</th><th>保证续保（如20年）</th><th>不保证续保（一年期）</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">续保条件</td><td>无论健康状况变化、是否理赔，都能续</td><td>每年审核，可能拒保或加费</td> </tr
+            <tr><td style="font-weight:600">费率</td><td>可调（跟随整体赔付率，不能针对个人）</td><td>可调，且可能针对个人</td> </tr
+            <tr><td style="font-weight:600">产品停售</td><td>保证期内不受影响</td><td>停售后无法续保</td> </tr
+            <tr><td style="font-weight:600">保费水平</td><td>初期稍贵</td><td>初期便宜，但后期可能涨很多</td> </tr
+            <tr><td style="font-weight:600">适合人群</td><td>担心未来健康变差的人</td><td>身体健康、随时可换产品的人</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>精算师建议：</strong><br>优先选“保证续保20年”：虽然每年涨价（随年龄和医疗通胀），但至少20年内不用担心被拒保或产品停售。是目前最稳妥的选择。<br>慎选“不保证续保”：年轻时便宜，但一旦身体出问题或理赔过，第二年可能被拒保。你那时再想买别的产品，可能因为健康问题买不到。</div>
+
+    <h2>九、表格：主流百万医疗险对比（示意）</h2>
+    <table>
+        <thead><tr><th>产品类型</th><th>年保费（30岁）</th><th>免赔额</th><th>给付比例</th><th>保证续保</th><th>总保额</th><th>特点</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">基础款</td><td>300元</td><td>1万</td><td>100%</td><td>否</td><td>200万</td><td>极便宜，但续保无保障</td> </tr
+            <tr><td style="font-weight:600">长险款（20年保证）</td><td>500元</td><td>1万</td><td>100%</td><td>20年</td><td>400万</td><td>价格适中，续保有保障</td> </tr
+            <tr><td style="font-weight:600">0免赔款</td><td>800元</td><td>0</td><td>100%</td><td>否</td><td>200万</td><td>小病也赔，但保费贵、续保差</td> </tr
+            <tr><td style="font-weight:600">隐藏坑产品</td><td>150元</td><td>2万</td><td>80%</td><td>否</td><td>100万</td><td>免赔高、给付低，出事自己花大钱</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>精算师推荐：</strong> 对大多数人，<strong>保证续保20年 + 1万免赔 + 100%给付</strong> 是性价比最高的选择。低于市场均价太多的产品，要仔细看条款。</div>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th> </tr</thead>
+            <tbody>
+                <tr><td style="font-weight:600">免赔额</td><td>Deductible</td><td>自掏腰包的部分，超过才赔。</td> </tr
+                <tr><td style="font-weight:600">给付比例</td><td>Benefit Ratio</td><td>超过免赔额后，保险公司赔百分之多少。</td> </tr
+                <tr><td style="font-weight:600">赔付率</td><td>Loss Ratio</td><td>赔出去的钱 ÷ 收上来的保费。</td> </tr
+                <tr><td style="font-weight:600">费用率</td><td>Expense Ratio</td><td>运营成本 ÷ 保费。</td> </tr
+                <tr><td style="font-weight:600">保证续保</td><td>Guaranteed Renewability</td><td>不管健康变化，保险公司都得让你续。</td> </tr
+                <tr><td style="font-weight:600">医疗通胀</td><td>Medical Inflation</td><td>医疗费用每年上涨，导致保费涨价。</td> </tr
+                <tr><td style="font-weight:600">报销型</td><td>Reimbursement Type</td><td>花多少报多少，百万医疗险是典型。</td> </tr
+                <tr><td style="font-weight:600">给付型</td><td>Benefit Type</td><td>确诊即赔固定金额，重疾险是典型。</td> </tr
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="11-买重疾险.html"><small>← 上一篇</small>第11章 · 如何用精算思维买重疾险</a><a class="next" href="13-年金险IRR.html"><small>下一篇 →</small>第13章 · 年金险值不值得买？IRR 算清楚</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

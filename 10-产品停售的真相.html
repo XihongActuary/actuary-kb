@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第10章：产品停售的真相</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="10">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html" class="on">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="244" y="48" width="72" height="10" rx="4" fill="#3d7a66"/><rect x="244" y="114" width="72" height="10" rx="4" fill="#e3d5b4"/><path d="M258 58 C258 84 302 84 302 112" fill="none" stroke="#c98f2b" stroke-width="4"/><path d="M302 58 C302 84 258 84 258 112" fill="none" stroke="#c98f2b" stroke-width="4"/><rect x="430" y="56" width="170" height="68" rx="8" fill="#fffdf8" stroke="#bf5638" stroke-width="2.5"/><line x1="450" y1="78" x2="580" y2="78" stroke="#e3d5b4" stroke-width="2"/><line x1="450" y1="92" x2="560" y2="92" stroke="#e3d5b4" stroke-width="2"/><line x1="450" y1="106" x2="575" y2="106" stroke="#e3d5b4" stroke-width="2"/><text x="280" y="150" font-size="13" fill="#3a3428" text-anchor="middle" font-family="serif">产品生命周期</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第10章</div>
+        <div class="main-title">为什么有些保险产品停售了？<br>——产品回溯与产品迭代</div>
+        </div>
+
+    <p>很多朋友问我：<br>“业务员说这款产品马上停售，不买就没了，是真的吗？”<br>“停售的产品是不是特别划算？要不要赶紧抢一份？”<br>“为什么有些网红产品卖得好好的，突然就停了？”</p>
+    <p>这些问题，都指向一个核心——<strong>保险产品为什么会停售？停售背后的真相是什么？</strong><br>今天，我带你从精算师的视角，拆解保险产品停售的真正原因。</p>
+
+    <h2>一、一个精算师的真实故事：一款“网红重疾险”的生死</h2>
+    <p>几年前，我参与过一款重疾险的停售决策。</p>
+    <p>这款产品上市时很火——保障全、价格低，被称为“网红重疾险”。上线半年就卖了50万单，公司上下都很兴奋。</p>
+    <p>但到了年底，精算团队做<strong>产品回溯</strong>时，发现了一个大问题：</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>实际赔付率</strong>比预期高了30%。</li>
+        <li><strong>退保率</strong>也比预期高（很多人跟风买，第二年又退保）。</li>
+        <li><strong>费用超支</strong>：因为销量大，客服和理赔人手跟不上，加班费暴涨。</li>
+    </ul>
+    <p>算下来，这款产品每卖一份，公司要亏200元。卖得越多，亏得越多。</p>
+    <p>产品部想涨价，但市场竞争激烈，一涨价就没人买。想调整条款，又需要监管审批，周期太长。</p>
+    <p>最后，管理层拍板：<strong>停售</strong>。</p>
+    <p>对外宣传是“产品升级、感恩回馈”，实际上是因为<strong>不赚钱</strong>。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 很多产品停售，不是因为“太划算保险公司亏了”，而是因为“卖得越多亏得越多”。所谓的“最后机会”，往往是精算师算出来再卖下去要破产。</div>
+
+    <h2>二、核心原理：产品回溯——保险产品的“体检”</h2>
+    <h3>什么是产品回溯？</h3>
+    <p><strong>大白话：</strong> 产品回溯就是精算师定期给产品做“体检”，看看这款产品赚不赚钱。如果发现亏损，就要停售、涨价或调整条款。</p>
+    <p><strong>精算术语：</strong> 产品回溯是指保险公司在产品定价后，基于实际经验数据（赔付率、费用率、退保率、投资收益率等），对产品未来盈利状况进行的动态评估。它是产品管理和资本管理的重要工具。</p>
+
+    <h3>产品回溯看什么？</h3>
+    <p>精算师会追踪以下几个核心指标：</p>
+    <table>
+        <thead><tr><th>指标</th><th>含义</th><th>危险信号</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">赔付率</td><td>实际赔款 ÷ 预期赔款</td><td>连续超过100%</td></tr>
+            <tr><td style="font-weight:600">费用率</td><td>实际运营费用 ÷ 预期费用</td><td>超出预算20%以上</td></tr>
+            <tr><td style="font-weight:600">退保率</td><td>实际退保数 ÷ 预期退保数</td><td>远高于定价假设</td></tr>
+            <tr><td style="font-weight:600">利润率</td><td>产品带来的利润 ÷ 保费</td><td>为负或低于公司目标</td></tr>
+            <tr><td style="font-weight:600">资本回报率</td><td>利润 ÷ 占用的资本</td><td>低于公司平均</td></tr>
+        </tbody>
+    </table>
+
+    <h3>产品回溯的流程</h3>
+    <ol style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>数据收集</strong>：每季度/每年，精算团队收集产品的实际赔付、费用、退保、投资数据。</li>
+        <li><strong>对比假设</strong>：将这些数据与定价时的假设（生命表、费用率、退保率等）对比。</li>
+        <li><strong>偏差分析</strong>：找出哪些假设偏差大，原因是什么（比如疾病发生率上升？费用超支？）</li>
+        <li><strong>盈利预测</strong>：用最新数据重新预测产品未来的盈利状况。</li>
+        <li><strong>决策建议</strong>：如果预测持续亏损，建议停售、涨价或调整条款。</li>
+    </ol>
+    <div class="shuorenhua"><strong>说人话：</strong> 精算师就像产品的“体检医生”，定期检查血压（赔付率）、血糖（费用率）、心电图（利润率）。指标正常就继续卖，指标异常就要“动手术”甚至“拔管”。</div>
+
+    <h2>三、产品停售的五大真实原因</h2>
+    <table>
+        <thead><tr><th>原因</th><th>解释</th><th>例子</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">1. 赔付率过高，亏损严重</td><td>实际出险人数远超预期，赔款超出保费</td><td>某网红重疾险因定价太激进，赔付率超150%</td></tr>
+            <tr><td style="font-weight:600">2. 利率下行，利差损风险大</td><td>预定利率偏高，投资收益率跟不上</td><td>90年代8%的保单，后来全部停售</td></tr>
+            <tr><td style="font-weight:600">3. 监管政策变化</td><td>新规要求调整条款或定价</td><td>2021年重疾新规，旧版重疾险全部停售</td></tr>
+            <tr><td style="font-weight:600">4. 费用超支，不赚钱</td><td>佣金、运营成本太高</td><td>某产品通过代理人渠道销售，佣金占保费40%</td></tr>
+            <tr><td style="font-weight:600">5. 产品迭代升级</td><td>推出新一代产品，老产品自然淘汰</td><td>某公司每年更新一次意外险</td></tr>
+        </tbody>
+    </table>
+    <p><strong>特别注意：</strong> 第5种“产品迭代”是正常的商业行为，不代表老产品不好。但前四种都是<strong>产品本身出了问题</strong>，停售是“被迫”的。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 停售不一定是因为“太划算”。很多时候恰恰相反——是因为保险公司算下来“划不来”，再卖就亏钱。</div>
+
+    <h2>四、生活类比：餐厅的菜单</h2>
+    <p>想象你开了一家餐厅。</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li>有些菜卖得好、利润高，你会一直保留（明星产品）。</li>
+        <li>有些菜卖得好但利润低（比如特价菜），你会定期换掉（引流产品）。</li>
+        <li>有些菜卖得不好还亏钱，你会直接下架（亏损产品）。</li>
+    </ul>
+    <p>保险产品也一样。</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>长期赚钱的产品</strong>：一直卖（如某些定期寿险）。</li>
+        <li><strong>短期引流产品</strong>：卖一段时间就停，目的是吸引客户再买别的（如低价百万医疗险）。</li>
+        <li><strong>亏损产品</strong>：赶紧停，避免窟窿越来越大（如定价失误的重疾险）。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 停售不一定是因为“绝版好货”，也可能是因为“难吃的菜要下架”。别一听停售就冲动。</div>
+
+    <h2>五、精算师视角：如何识别“真停售”还是“假促销”？</h2>
+    <h3>真停售（值得关注的）</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>监管政策导致</strong>：比如重疾新规、预定利率下调。这类停售通常有明确的时间节点，而且老产品确实比新产品有优势（如旧版重疾险甲状腺癌按重疾赔）。</li>
+        <li><strong>利率下行导致</strong>：高预定利率产品停售。如果你判断未来利率还会降，锁定当前利率是有价值的。</li>
+        <li><strong>产品确实划算</strong>：某些公司为了抢占市场，推出“亏本赚吆喝”的产品。这类产品卖一段时间就会停，买到就是赚到。但普通人很难判断，因为保险公司不会告诉你“我们在亏本卖”。</li>
+    </ul>
+    <h3>假停售（慎防的）</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>“限时抢购”话术</strong>：业务员说“只卖三天”，结果三个月后还在卖。这是典型的饥饿营销。</li>
+        <li><strong>“升级版”套路</strong>：说老产品停售，推新产品。结果新产品价格更贵、保障更差。要仔细对比。</li>
+        <li><strong>“停售”≠“绝版”</strong>：很多产品停售后，过几个月换个名字又出来卖了。别被“最后机会”冲昏头。</li>
+    </ul>
+    <h3>判断方法</h3>
+    <table>
+        <thead><tr><th>问自己</th><th>如果答案是“是”，可能是真停售</th></tr></thead>
+        <tbody>
+            <tr><td>监管有明确的停售截止日吗？</td><td>是</td> </tr>
+            <tr><td>停售原因是利率下行吗？</td><td>是</td> </tr>
+            <tr><td>这款产品的价格明显低于同类吗？</td><td>是</td> </tr>
+            <tr><td>业务员能说清楚停售的技术原因吗？</td><td>能（而非只会说“公司通知”）</td> </tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 真停售通常有外部原因（监管、利率），假停售往往是内部营销。如果业务员只会说“快没了快没了”，却说不清为什么没，大概率是套路。</div>
+
+    <h2>六、表格：不同类型停售的特点</h2>
+    <table>
+        <thead><tr><th>停售类型</th><th>典型例子</th><th>是否值得抢</th><th>注意事项</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">监管政策停售</td><td>2021年旧版重疾险</td><td>✅ 值得（保障更好）</td><td>确认新旧差异，别盲目</td> </tr>
+            <tr><td style="font-weight:600">利率下行停售</td><td>4.025%年金停售</td><td>✅ 值得（锁息）</td><td>确保资金长期不用</td> </tr>
+            <tr><td style="font-weight:600">产品亏损停售</td><td>某些网红医疗险</td><td>⚠️ 不一定</td><td>亏损产品停售，未来可能没有续保保障</td> </tr>
+            <tr><td style="font-weight:600">产品迭代停售</td><td>意外险每年换款</td><td>❌ 不值得</td><td>新款通常更好</td> </tr>
+            <tr><td style="font-weight:600">营销套路停售</td><td>“限时三天”</td><td>❌ 不值得</td><td>纯话术，别上当</td> </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td style="font-weight:600">产品回溯</td><td>Profit Testing / Experience Review</td><td>定期给产品做“体检”，看赚不赚钱。</td> </tr>
+                <tr><td style="font-weight:600">赔付率</td><td>Loss Ratio</td><td>实际赔款 ÷ 预期赔款，超过100%就亏了。</td> </tr>
+                <tr><td style="font-weight:600">费用率</td><td>Expense Ratio</td><td>实际费用 ÷ 预期费用，超支就是问题。</td> </tr>
+                <tr><td style="font-weight:600">退保率</td><td>Lapse Rate</td><td>实际退保数 ÷ 预期退保数，太高影响利润。</td> </tr>
+                <tr><td style="font-weight:600">产品迭代</td><td>Product Iteration</td><td>老产品下架，上新产品，正常商业行为。</td> </tr>
+                <tr><td style="font-weight:600">监管停售</td><td>Regulatory Discontinuation</td><td>因监管新规导致产品停售，通常有明确节点。</td> </tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="09-利差损与资产负债管理.html"><small>← 上一篇</small>第9章 · 利差损与资产负债管理</a><a class="next" href="11-买重疾险.html"><small>下一篇 →</small>第11章 · 如何用精算思维买重疾险</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

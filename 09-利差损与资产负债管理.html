@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第9章：利差损与资产负债管理</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="09">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html" class="on">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><line x1="340" y1="52" x2="340" y2="96" stroke="#3a3428" stroke-width="3"/><path d="M300 96 h80" stroke="#3a3428" stroke-width="3"/><path d="M340 96 L250 120 M340 96 L430 120" stroke="#3a3428" stroke-width="3"/><rect x="170" y="120" width="120" height="26" rx="6" fill="#3d7a66"/><rect x="390" y="120" width="120" height="26" rx="6" fill="#bf5638"/><path d="M330 120 L360 138 L390 120" fill="none" stroke="#c98f2b" stroke-width="2"/><text x="230" y="163" font-size="13" fill="#3d7a66" text-anchor="middle" font-family="serif">资产端收益</text><text x="450" y="163" font-size="13" fill="#bf5638" text-anchor="middle" font-family="serif">负债端成本</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第9章</div>
+        <div class="main-title">精算师怎么“赌”未来利率？<br>——利差损与资产负债管理</div>
+        </div>
+
+    <p>很多朋友问我：<br>“为什么90年代买保险的人‘赚大了’？现在还能买到那样的产品吗？”<br>“预定利率一直在降，是不是越晚买保险越亏？”<br>“保险公司会不会因为利率下降而破产？我的保单安全吗？”</p>
+    <p>这些问题，都指向一个核心——<strong>精算师怎么“赌”未来利率？</strong><br>今天，我带你拆解保险业最头疼的风险之一：<strong>利差损</strong>。</p>
+
+    <h2>一、一个精算师的真实故事：90年代，那些“卖亏了”的保单</h2>
+    <p>上世纪90年代，中国保险业经历过一段“疯狂”的时期。<br>当时银行一年期存款利率高达10%以上，保险公司为了竞争，推出了预定利率高达8%-10%的储蓄型保单。客户买了这些保单，相当于锁定了未来几十年8%以上的复利回报。</p>
+    <p><strong>然后，噩梦开始了。</strong><br>1996年起，央行连续降息，一年期存款利率从10%以上一路跌到2%左右。但保险公司已经卖出去的保单，依然要按8%的预定利率给客户回报。<br>保险公司拿着保费去投资，只能赚2%-3%，却要付8%的利息。卖得越多，亏得越多。</p>
+    <p>这就是<strong>利差损</strong>。<br>根据高盛2003年的估计，国寿、平安、太保三大寿险公司的潜在利差损约为<strong>320亿元至760亿元</strong>。这个窟窿，花了十几年才慢慢消化。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 保险公司当年太“慷慨”，承诺了高回报，结果市场利率大跌，卖一份亏一份。那批买了8%保单的客户“躺赢”了，但保险公司差点被拖垮。</div>
+
+    <h2>二、核心原理：利差损——保险公司最怕的“隐形杀手”</h2>
+    <h3>什么是利差？</h3>
+    <p><strong>大白话：</strong> 利差 = 保险公司实际投资收益率 − 预定利率。<br>- <strong>利差益</strong>：实际收益 > 预定利率 → 赚钱。<br>- <strong>利差损</strong>：实际收益 < 预定利率 → 亏钱。</p>
+    <h3>利差损是怎么产生的？</h3>
+    <p>保险公司卖出一份长期保单（如终身年金），承诺未来几十年按预定利率（比如3%）给客户回报。但保险公司的投资收益率受市场利率影响。<br>如果市场利率下行，保险公司投资收益降到2%，但还是要按3%给客户，每张保单每年亏1%的利差。<br><strong>长期累积下来，就是巨额亏损。</strong></p>
+    <h3>为什么利差损这么可怕？</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>长期锁定</strong>：保单期限可能长达30年、50年甚至终身，亏损无法短期扭转。</li>
+        <li><strong>规模巨大</strong>：保险公司卖出的保单数以百万计，小利差乘以大规模，就是天文数字。</li>
+        <li><strong>难以对冲</strong>：市场上很难找到长达30年、收益稳定的投资品种来匹配负债。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 利差损就像你承诺给朋友每年10%的利息借钱，结果自己只能赚3%，每借一笔就亏一笔。借得越多，亏得越惨。</div>
+
+    <h2>三、生活类比：固定利率房贷 vs 浮动利率</h2>
+    <p>想象你买房时选了<strong>固定利率房贷</strong>，利率5%。<br>- 如果市场利率涨到8%，你赚了（比市场少付3%）。<br>- 如果市场利率跌到2%，你亏了（比市场多付3%）。</p>
+    <p>保险公司的利差损风险，和这个一模一样。<br><strong>保险公司卖出的长期保单，就像给客户发放了“固定利率存款”。</strong> 客户锁定了一个较高的回报率，保险公司则承担了利率下行的风险。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 90年代买了8%保单的客户，相当于锁定了8%的“固定利率存款”，而保险公司成了那个“多付利息”的倒霉蛋。</div>
+
+    <h2>四、精算师怎么管理利率风险？——资产负债管理的三大核心目标</h2>
+    <p>精算师不是真的在“赌”。他们用一套科学的方法来管理利率风险：<strong>资产负债管理（ALM）</strong>。核心目标是让资产和负债在三个维度上“对得上”。</p>
+
+    <h3>目标1：期限匹配——让“时间”对得上</h3>
+    <p><strong>理想状态：</strong> 资产久期 ≈ 负债久期<br><strong>说人话：</strong> 就像你存了一笔钱给孩子上大学，最好就是存一个和孩子上大学时间匹配的定期。如果资产期限太短，利率下降时再投资会吃亏；如果资产期限太长，利率上升时资产会贬值。</p>
+
+    <h3>目标2：成本收益匹配——让“利率”对得上</h3>
+    <p><strong>理想状态：</strong> 资产收益 ≥ 负债成本<br><strong>说人话：</strong> 你借钱给别人，收的利息要高于你付的利息，否则就是亏本生意。保险公司必须确保投资赚的钱，至少能覆盖给客户的承诺回报。</p>
+
+    <h3>目标3：现金流匹配——让“钱”对得上</h3>
+    <p><strong>理想状态：</strong> 每个时间点，资产现金流 ≥ 负债现金流<br><strong>说人话：</strong> 就像你每个月都要还房贷，要保证该赔钱的时候，账上正好有钱。保险公司要确保在每一年需要支付赔款或年金时，账上有足够的现金。</p>
+
+    <div class="insight-box">
+        📌 <strong>资产负债管理三大目标速记</strong><br>
+        1️⃣ 期限匹配：时间要对得上<br>
+        2️⃣ 成本收益匹配：利率要对得上<br>
+        3️⃣ 现金流匹配：钱要对得上
+    </div>
+
+    <h2>五、低利率时代，保险公司怎么应对？——管好分子，管好分母</h2>
+    <p>当前全球进入低利率时代，寿险公司面临巨大挑战。资产负债管理的核心是“管好分子，管好分母”。</p>
+    <p><strong>分子 = 投资收益、资产回报</strong><br><strong>分母 = 负债成本、保单承诺回报</strong><br><strong>目标：分子 ≥ 分母</strong></p>
+
+    <h3>资产端策略（做大分子）</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>拉长久期</strong>：购买超长期国债、地方债，匹配长期负债。</li>
+        <li><strong>全球化配置</strong>：分散投资不同国家，寻找更高收益。</li>
+        <li><strong>适度增加权益</strong>：在风险可控下配置高股息股票、REITs。</li>
+        <li><strong>多元化投资</strong>：基础设施、私募股权等另类投资。</li>
+    </ul>
+
+    <h3>负债端策略（做小分母）</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>降低新保单成本</strong>：下调预定利率，控制给客户的承诺回报。</li>
+        <li><strong>调整产品结构</strong>：增加保障型产品（死差、费差贡献利润），减少纯储蓄型产品。</li>
+        <li><strong>增加浮动收益产品</strong>：分红险、万能险，将部分利率风险转移给客户。</li>
+        <li><strong>控制退保风险</strong>：防止利率上升时客户大规模退保。</li>
+    </ul>
+
+    <h3>资产负债联动：统筹“三端四表”</h3>
+    <p>保险公司需要打通资产端、负债端、资本端，协调资产负债表、利润表、现金流量表、偿付能力表，实现整体最优。</p>
+
+    <h3>日本案例启示</h3>
+    <p>日本在90年代泡沫破裂后进入超低利率时代，寿险公司经历了大规模利差损危机。幸存下来的公司做了两件事：</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>明治安田生命</strong>：海外资产占比从2002年不足5%提升至2019年的27.4%，有效对冲了国内低利率。</li>
+        <li><strong>第一生命</strong>：保障型产品业务占比从12%增至38%，死差益贡献率超40%，降低了对利差的依赖。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 低利率时代，保险公司一边要“开源”（去海外、多投资），一边要“节流”（少给承诺、多卖保障型产品）。日本公司的经验告诉我们，转型成功就能活下来。</div>
+
+    <h2>六、2026年新规：从“暂行办法”到“全面规管”</h2>
+    <p>为了防范利差损风险，监管在2025年底发布了《保险公司资产负债管理办法》，2026年起正式实施。从“暂行办法”升级为“正式办法”，法律效力大幅提升。</p>
+
+    <h3>七大核心变化</h3>
+    <table>
+        <thead><tr><th>变化</th><th>2019旧规</th><th>2025新规</th><th>核心变化</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">制度层级</td><td>暂行办法</td><td>正式办法</td><td>法律效力提升</td></tr>
+            <tr><td style="font-weight:600">指标体系</td><td>评分体系</td><td>硬性指标+阈值</td><td>从软性评分到硬性限额</td></tr>
+            <tr><td style="font-weight:600">治理架构</td><td>牵头部门</td><td>独立部门</td><td>资负管理独立</td></tr>
+            <tr><td style="font-weight:600">技术适配</td><td>传统久期</td><td>纳入衍生工具对冲，评价周期3-5年</td><td>更真实反映风险</td></tr>
+            <tr><td style="font-weight:600">监管措施</td><td>原则性要求</td><td>梯度清晰的监管工具箱</td><td>约谈、整改、罚款</td></tr>
+            <tr><td style="font-weight:600">委托管理</td><td>分离管理</td><td>信息共享协同</td><td>委托方与受托方联动</td></tr>
+            <tr><td style="font-weight:600">考核导向</td><td>短期导向</td><td>长周期考核</td><td>防止过度追求短期利润</td></tr>
+        </tbody>
+    </table>
+
+    <h3>新规下的四大监管指标——寿险公司的“硬杠杠”</h3>
+    <table>
+        <thead><tr><th>指标</th><th>计算公式</th><th>阈值</th><th>说人话</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">有效久期缺口</td><td>资产有效久期 - 负债有效久期</td><td>[-5年，+5年]</td><td>资产和负债的平均时间差，不能超过5年。时间差太大，利率一波动就会亏。</td></tr>
+            <tr><td style="font-weight:600">综合投资收益覆盖率</td><td>（过去5年综合投资收益 ÷ 过去5年负债资金成本）×100%</td><td>≥100%</td><td>过去5年投资赚的钱，要能覆盖负债成本。赚的不够花，危险。</td></tr>
+            <tr><td style="font-weight:600">净投资收益覆盖率</td><td>（过去3年净投资收益 ÷ 过去3年负债保证成本）×100%</td><td>≥100%</td><td>过去3年稳定的投资收益，要能覆盖保证成本。靠炒股赚的不算，要稳定的。</td></tr>
+            <tr><td style="font-weight:600">压力情景下流动性覆盖率</td><td>压力情景下流动性资产 ÷ 流动性负债 ×100%</td><td>≥100%</td><td>极端情况下，账上现金要够赔。不能等卖资产，要现钱。</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 新规给保险公司上了四道“硬杠杠”。时间错配不能太大、投资收益要够覆盖成本、极端情况要有现金。哪条不达标，监管就要约谈、整改、甚至罚款。</div>
+
+    <h2>七、精算师视角：现在的保险还值得买吗？</h2>
+    <p>很多人问：“预定利率从4.025%降到3.5%、3.0%、2.5%、2.0%，现在买保险是不是亏了？”</p>
+    <p><strong>精算师的回答是：</strong></p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>不要跟90年代比</strong>：那个时代已经过去了。现在的预定利率反映了真实的市场利率水平。保险公司不可能长期提供高于市场利率太多的产品，否则就会产生新的利差损。</li>
+        <li><strong>锁定长期利率仍有价值</strong>：银行定期存款利率已经降到1.3%-1.8%，而保险产品预定利率仍在2%左右。如果你有一笔长期不用的钱，买储蓄型保险锁定2%的复利，比存款和国债仍有优势。</li>
+        <li><strong>保障型保险不受利率影响</strong>：重疾险、定期寿险、医疗险的核心是保障，不是储蓄。利率下降会导致这些产品涨价（因为折现因子变小），但如果你已经买了，不受影响。还没买的，早买比晚买便宜。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 现在的预定利率虽然比过去低，但已经是市场能给出的最好水平了。如果你需要长期储蓄或保障，现在买仍然合理。别指望回到8%的时代，那是不可能的。</div>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td style="font-weight:600">利差</td><td>Interest Spread</td><td>实际投资收益率 − 预定利率。</td></tr>
+                <tr><td style="font-weight:600">利差损</td><td>Negative Spread</td><td>投资收益低于预定利率，保险公司亏钱。</td></tr>
+                <tr><td style="font-weight:600">利差益</td><td>Positive Spread</td><td>投资收益高于预定利率，保险公司赚钱。</td></tr>
+                <tr><td style="font-weight:600">资产负债管理</td><td>Asset-Liability Management (ALM)</td><td>让资产和负债在期限、利率、现金上匹配。</td></tr>
+                <tr><td style="font-weight:600">久期</td><td>Duration</td><td>资产或负债的平均回本时间。</td></tr>
+                <tr><td style="font-weight:600">有效久期缺口</td><td>Effective Duration Gap</td><td>资产久期减负债久期，要求±5年内。</td></tr>
+                <tr><td style="font-weight:600">综合投资收益覆盖率</td><td>Comprehensive Investment Income Coverage</td><td>过去5年投资收益 ÷ 负债成本，≥100%。</td></tr>
+                <tr><td style="font-weight:600">净投资收益覆盖率</td><td>Net Investment Income Coverage</td><td>过去3年稳定投资收益 ÷ 保证成本，≥100%。</td></tr>
+                <tr><td style="font-weight:600">压力情景下流动性覆盖率</td><td>Liquidity Coverage Ratio under Stress</td><td>极端情况下现金 ÷ 要赔的钱，≥100%。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="08-自然保费vs均衡保费.html"><small>← 上一篇</small>第8章 · 自然保费 vs 均衡保费</a><a class="next" href="10-产品停售的真相.html"><small>下一篇 →</small>第10章 · 产品停售的真相</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

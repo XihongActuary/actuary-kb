@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第5章：不确定性 vs 风险</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="05">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html" class="on">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画：可保风险"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><path d="M96 84 q10 -20 34 -16 q10 -14 30 -6 q20 -6 24 10 q16 4 10 18 q-4 10 -18 10 h-64 q-18 -2 -16 -16z" fill="#fffdf6" stroke="#e3d5b4" stroke-width="2.5"/><line x1="112" y1="108" x2="106" y2="120" stroke="#3d7a66" stroke-width="2.5" stroke-linecap="round"/><line x1="142" y1="108" x2="136" y2="120" stroke="#3d7a66" stroke-width="2.5" stroke-linecap="round"/><line x1="172" y1="108" x2="166" y2="120" stroke="#3d7a66" stroke-width="2.5" stroke-linecap="round"/><text x="140" y="150" font-size="13" fill="#3a3428" text-anchor="middle" font-family="serif">不确定性 · 算不了</text><path d="M400 104 q62 -50 124 0 q-31 -12 -62 0 q-31 12 -62 0 z" fill="#bf5638"/><line x1="462" y1="102" x2="462" y2="128" stroke="#3a3428" stroke-width="3"/><rect x="438" y="134" width="48" height="28" fill="#fffdf6" stroke="#3a3428" stroke-width="2"/><path d="M432 134 l30 -18 l30 18 z" fill="#bf5638"/><text x="462" y="178" font-size="13" fill="#3d7a66" text-anchor="middle" font-family="serif">风险 · 算得清，才可保</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第5章</div>
+        <div class="main-title">为什么保险公司不卖“保证赚钱”的保险？<br>——不确定性 vs 风险</div>
+        </div>
+
+    <p>很多朋友问我：<br>“有没有一种保险，买了就稳赚不赔？比如没生病就退保费？”<br>“为什么没有‘如果我健康就返钱’的产品？保险公司怕什么？”<br>“炒股亏了能买保险吗？为什么没有‘亏损险’？”</p>
+    <p>这些问题，都指向一个核心——<strong>保险公司到底保什么，不保什么？</strong><br>今天，我带你拆解保险的边界：<strong>不确定性 vs 风险</strong>，以及什么是“可保风险”。</p>
+
+    <h2>一、一个精算师的真实故事：为什么“健康返还险”性价比很低？</h2>
+    <p>几年前，有个产品经理兴冲冲地来找我：“老张，我想设计一款爆款重疾险——如果客户没得重疾，就把保费全额返还！这样客户怎么都不会亏，肯定大卖！”</p>
+    <p>我给他算了一笔账：</p>
+    <div class="insight-box">
+        📊 30岁男性，100万保额，消费型重疾险纯保费约2000元/年（假设）。如果加“返还保费”责任，保险公司需要把客户交的保费拿去投资，用投资收益来覆盖“返还”的成本。<br><br>
+        按3%预定利率算，30年累计保费约6万，30年后返还6万，现值只有2.5万左右。这意味着，客户实际上为“返还”这个功能多付了2.5万的现值。<br><br>
+        <strong>更关键的是：</strong> 如果客户真的得了重疾，保险公司赔了100万，那“返还”责任就失效了——客户等于白交了返还的保费。
+    </div>
+    <p>我问他：“你觉得客户愿意为‘大概率拿不到’的返还多付2.5万吗？这性价比太低了。”</p>
+    <p>他沉默了。</p>
+    <p><strong>这就是保险的本质：你买的是“万一出事”的保障，不是“投资赚钱”。想“不亏本”，反而可能花更多冤枉钱。</strong></p>
+
+    <h2>二、核心原理：风险 vs 不确定性</h2>
+    <p>精算师把未来事件分为两类：<strong>风险</strong> 和 <strong>不确定性</strong>。</p>
+    <table>
+        <thead><tr><th>概念</th><th>英文</th><th>定义</th><th>例子</th><th>能否保险</th></tr></thead>
+        <tbody>
+            <tr><td>风险</td><td>Risk</td><td>未来结果不确定，但<strong>概率可知</strong>（可统计、可预测）</td><td>一年内身故概率0.001；车险出险概率0.05</td><td>✅ 可以</td></tr>
+            <tr><td>不确定性</td><td>Uncertainty</td><td>未来结果不确定，且<strong>概率无法知道</strong>（无历史数据、无法预测）</td><td>明天股票涨跌；新病毒爆发概率；AI取代工作的概率</td><td>❌ 不能</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 风险是可以“算”的，不确定性是“算不了”的。保险公司只保能算的。</div>
+
+    <h3>精算师怎么区分？</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>有数据、有规律</strong>：比如死亡率、重疾发生率、车祸概率。这些可以通过大数法则稳定预测 → <strong>可保风险</strong>。</li>
+        <li><strong>无数据、无规律</strong>：比如明天会不会地震（虽有地质数据，但个体地震不可预测）、某只股票会不会涨。这些无法通过大数法则稳定 → <strong>不可保</strong>。</li>
+    </ul>
+
+    <h2>三、可保风险的六个条件</h2>
+    <p>一个风险要能被保险承保，必须同时满足以下六个条件：</p>
+    <table>
+        <thead><tr><th>条件</th><th>解释</th><th>反例</th></tr></thead>
+        <tbody>
+            <tr><td><strong>1. 大量独立同质风险单元</strong></td><td>要有足够多、风险相似的保单，大数法则才能生效</td><td>太空旅行保险（人太少）</td></tr>
+            <tr><td><strong>2. 损失概率可测</strong></td><td>能够用历史数据估算出概率</td><td>新型病毒（无历史数据）</td></tr>
+            <tr><td><strong>3. 损失是纯粹的</strong></td><td>只有损失可能，没有获利可能（不能是投机）</td><td>股票投资（可能赚可能亏）</td></tr>
+            <tr><td><strong>4. 损失是偶然的</strong></td><td>不能是投保人故意造成的</td><td>自残、纵火骗保</td></tr>
+            <tr><td><strong>5. 损失是重大的</strong></td><td>对投保人造成经济压力，值得保险</td><td>手机碎屏（小额损失，但有些公司也保，靠附加费）</td></tr>
+            <tr><td><strong>6. 损失是可以货币衡量的</strong></td><td>能用钱来量化</td><td>情感伤害、失去宠物（难以定价）</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 保险保的是“你控制不了、但能算出概率、而且一旦发生会让你很惨”的事情。</div>
+
+    <h2>四、保障类保险 vs 养老储蓄类保险：先搞清楚你要买什么</h2>
+    <p>很多朋友买保险时，把“保障”和“储蓄”混为一谈，结果买了一堆“四不像”产品。这里必须做一个清晰的区分：</p>
+    <table>
+        <thead><tr><th>维度</th><th><strong>保障类保险</strong></th><th><strong>养老储蓄类保险</strong></th></tr></thead>
+        <tbody>
+            <tr><td><strong>核心目的</strong></td><td>防范“早死、大病、意外”带来的财务崩溃</td><td>为“活太久”准备现金流，或强制储蓄</td></tr>
+            <tr><td><strong>典型产品</strong></td><td>定期寿险、重疾险、医疗险、意外险</td><td>养老年金、增额终身寿险、万能险（储蓄部分）</td></tr>
+            <tr><td><strong>赔付条件</strong></td><td>发生保险事故（身故、重疾、住院、意外）</td><td>生存到约定年龄（年金）或退保/减保（增额寿）</td></tr>
+            <tr><td><strong>风险类型</strong></td><td>纯粹风险（早死、大病）</td><td>长寿风险（活太久）或利率风险</td></tr>
+            <tr><td><strong>是否应该“返本”</strong></td><td><strong>不应该。</strong>返本会大幅拉低性价比，你为“不亏”付出了高昂代价</td><td>可以接受，因为本身就是储蓄</td></tr>
+            <tr><td><strong>适合人群</strong></td><td>所有人，尤其家庭支柱</td><td>已配齐保障后，有多余资金且想长期储蓄的人</td></tr>
+        </tbody>
+    </table>
+
+    <h3>为什么保障类保险追求“返本”性价比很低？</h3>
+    <p>以30岁男性、100万保额、保至70岁的定期寿险为例：</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>消费型</strong>：年保费约2000元，30年总保费6万。如果70岁前身故，赔100万；如果没身故，保费不退还。</li>
+        <li><strong>返还型</strong>：年保费约5000元，30年总保费15万。如果70岁前身故，赔100万；如果没身故，返还15万（或略多一点）。</li>
+    </ul>
+    <p>看起来“没亏”，但你多交了9万。这9万如果自己投资，哪怕年化3%，30年后也能变成约21万——远高于返还的15万。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 保障类保险的“返本”功能，本质上是你多交钱给保险公司去投资，然后它把本金还给你（利息很少）。还不如买消费型，省下的钱自己存着。</div>
+
+    <h3>养老储蓄类保险则可以接受“返本”</h3>
+    <p>养老年金、增额终身寿险，本身就是储蓄工具。你交钱，保险公司帮你投资，然后分期返还给你。这类产品关注的是<strong>内部收益率（IRR）</strong>和<strong>现金价值增长</strong>，而不是“是否返本”——因为返本就是它的设计目标。</p>
+    <div class="shuorenhua"><strong>行动建议：</strong> 先买足保障类保险（定期寿险、重疾险、医疗险、意外险），再考虑养老储蓄类保险。别用保障类保险的预算去追求“返本”，那会让你花冤枉钱。</div>
+
+    <h2>五、什么不保？——常见不可保风险</h2>
+    <table>
+        <thead><tr><th>不可保风险</th><th>原因</th><th>那怎么办？</th></tr></thead>
+        <tbody>
+            <tr><td><strong>投机风险</strong>（炒股、炒房、赌博）</td><td>可能赚可能亏，不是纯粹损失</td><td>自己承担，或用期权等金融工具对冲</td></tr>
+            <tr><td><strong>核辐射、战争</strong></td><td>损失太大、概率难测、非独立</td><td>国家兜底或专门巨灾保险（很少）</td></tr>
+            <tr><td><strong>故意行为</strong>（自残、犯罪）</td><td>违背保险基本原则</td><td>法律制裁，保险公司不赔</td></tr>
+            <tr><td><strong>情感损失</strong>（失恋、精神痛苦）</td><td>无法用钱衡量</td><td>自己消化或心理咨询</td></tr>
+            <tr><td><strong>必然发生的损失</strong>（如年老自然死亡）</td><td>不是偶然事件</td><td>养老年金（不是保死亡，是保活太久）</td></tr>
+        </tbody>
+    </table>
+    <p><strong>特别注意：</strong> 赌博和保险的区别</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>赌博</strong>：创造了一个原本不存在的风险（你本来不会输钱，下注才产生风险），且可能获利。</li>
+        <li><strong>保险</strong>：转移一个本来就存在的风险（你本来就有可能生病、出车祸），且不能获利（只能补偿损失，不能赚钱）。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 保险是“花钱买安心”，赌博是“花钱买刺激”。保险公司不保赌博，因为它不是纯粹风险。</div>
+
+    <h2>六、生活类比：为什么没有“晴天险”？</h2>
+    <p>想象你开一家露天咖啡馆。你担心下雨没生意，想买一份“晴天险”——如果下雨，保险公司赔你损失。</p>
+    <p>精算师会告诉你：下雨的概率有历史数据（比如某地全年30%天数下雨），可以算。但问题是，下雨对你造成的损失是“营业额下降”，而营业额受太多因素影响（节假日、周边竞争、天气炎热程度等），很难精确衡量。</p>
+    <p>更重要的是，如果你买了“晴天险”，你可能就不关心天气了——甚至希望下雨好拿赔款。这叫<strong>道德风险</strong>（Moral Hazard）。</p>
+    <p><strong>保险公司喜欢的是：</strong><br>- 损失原因明确（下雨 vs 不下雨）<br>- 损失金额可衡量（你无法控制损失大小）<br>- 投保人无法故意制造损失（你不能操控天气）</p>
+    <p><strong>所以，你买不到“晴天险”，但可以买“营业中断险”</strong>（通常附加在财产险里，有明确的触发条件，如火灾导致停业）。</p>
+
+    <h2>七、精算师视角：保险公司也是“风险厌恶者”</h2>
+    <p>很多人以为保险公司是“赌徒”，敢接别人不敢接的风险。</p>
+    <p>其实恰恰相反：<strong>保险公司是极度厌恶风险的</strong>。</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li>它只保那些<strong>概率可测、波动可控</strong>的风险。</li>
+        <li>它会用<strong>再保险</strong>把超出自己承受能力的风险转出去。</li>
+        <li>它会在保费中加入<strong>安全边际</strong>（多收一点，以防实际赔款超预期）。</li>
+        <li>它会用<strong>除外责任</strong>排除那些不可测或道德风险高的情形（如战争、核爆炸、自残）。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 保险公司不是不怕风险，而是只敢碰那些“算得清”的风险。算不清的，给再多钱也不保。</div>
+
+    <h2>八、表格：可保风险 vs 不可保风险对比</h2>
+    <table>
+        <thead><tr><th>维度</th><th>可保风险</th><th>不可保风险</th></tr></thead>
+        <tbody>
+            <tr><td>概率可知性</td><td>有历史数据，可统计</td><td>无数据，或数据不足</td></tr>
+            <tr><td>损失性质</td><td>纯粹风险（只有损失可能）</td><td>投机风险（可能赚可能亏）</td></tr>
+            <tr><td>偶然性</td><td>非故意、不可控</td><td>可能是故意的（骗保）</td></tr>
+            <tr><td>损失大小</td><td>重大，值得保险</td><td>小额，或无法衡量</td></tr>
+            <tr><td>独立性</td><td>各风险单元独立</td><td>可能大规模同时发生（系统性风险）</td></tr>
+            <tr><td>典型例子</td><td>身故、重疾、车祸、火灾</td><td>股票亏损、战争、核泄漏、失恋</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td>风险</td><td>Risk</td><td>能算出概率的坏事，保险公司敢保。</td></tr>
+                <tr><td>不确定性</td><td>Uncertainty</td><td>算不出概率的事，保险公司不敢保。</td></tr>
+                <tr><td>纯粹风险</td><td>Pure Risk</td><td>只有损失可能，没有获利可能，保险保这种。</td></tr>
+                <tr><td>投机风险</td><td>Speculative Risk</td><td>可能赚也可能亏，保险不保。</td></tr>
+                <tr><td>可保风险</td><td>Insurable Risk</td><td>满足六个条件，保险公司愿意承保的风险。</td></tr>
+                <tr><td>道德风险</td><td>Moral Hazard</td><td>买了保险后，人变得更不小心或故意制造事故。</td></tr>
+                <tr><td>除外责任</td><td>Exclusion</td><td>合同里写明不赔的情况。</td></tr>
+                <tr><td>保障类保险</td><td>Protection-oriented Insurance</td><td>防范早死、大病、意外的风险，建议买消费型。</td></tr>
+                <tr><td>养老储蓄类保险</td><td>Savings-oriented Insurance</td><td>为养老或长期储蓄，可接受“返本”。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="04-风险分级与定价.html"><small>← 上一篇</small>第4章 · 风险分级与定价</a><a class="next" href="06-保单价格拆解.html"><small>下一篇 →</small>第6章 · 一张保单的价格是怎么拆出来的</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

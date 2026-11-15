@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第14章：分红险/万能险的演示利率可信吗</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="14">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html" class="on">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host .alert-box{
+            background-color: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #7f1a1a;
+        }
+.art-host .sales-talk-box{
+            background-color: #fff4e0;
+            border-left: 4px solid #e67e22;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 14px;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+.art-host .step-list{
+            background-color: #e8f4f8;
+            border-radius: 16px;
+            padding: 16px;
+            margin: 1.2em 0;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="180" y="56" width="90" height="90" rx="6" fill="#c98f2b"/><rect x="400" y="106" width="90" height="40" rx="6" fill="#3d7a66"/><line x1="140" y1="56" x2="560" y2="56" stroke="#bf5638" stroke-width="2" stroke-dasharray="6 5"/><text x="225" y="166" font-size="13" fill="#c98f2b" text-anchor="middle" font-family="serif">演示利率</text><text x="445" y="166" font-size="13" fill="#3d7a66" text-anchor="middle" font-family="serif">实际实现率</text><text x="140" y="48" font-size="12" fill="#bf5638" font-family="serif">演示 ≠ 保证</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第14章</div>
+        <div class="main-title">分红险/万能险的“演示利率”可信吗？<br>——精算假设与消费者保护</div>
+        </div>
+
+    <p>很多朋友问我：<br>“业务员给我看的演示收益那么高，真的能实现吗？”<br>“分红险的分红到底从哪里来？为什么有时候一分钱都没有？”<br>“万能险的结算利率一直在降，是不是骗人的？”</p>
+    <p>这些问题，都指向一个核心——<strong>分红险和万能险的演示利率，到底可信吗？</strong><br>今天，我带你拆解这两类产品的精算逻辑，教你分辨“演示”和“实际”的差距，以及如何保护自己的利益。</p>
+
+    <h2>一、一个精算师的真实故事：演示很高，为何实际很低？</h2>
+    <p>一位客户拿着一份分红险合同来找我。<br>“老张，业务员当时给我看的演示，60岁能领50万。现在每年公布的分红实现率只有60%，到60岁估计只能领30万。我是不是被坑了？”</p>
+    <p>我告诉他：从<strong>2026年5月起</strong>，监管规定分红险和万能险的演示利率<strong>最高只能按3.5%（中档）</strong>，不再允许设高档。过去的高档演示（4.5%以上）已退出历史舞台。</p>
+    <p>但即便如此，3.5%的演示也只是“乐观假设”，实际能不能达到，取决于保险公司的投资能力。客户查了一下，他买的这款产品过去5年分红实现率在55%-75%之间波动，实际收益率远低于演示。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 监管已经把演示上限压到3.5%，但3.5%仍然是“努力目标”，不是承诺。真正靠谱的是看这家公司<strong>过去5-10年的分红实现率</strong>，以及<strong>最差情况下的保底收益</strong>。</div>
+
+    <h2>二、核心原理：分红险和万能险是什么？</h2>
+    <h3>分红险（Participating Insurance）</h3>
+    <p><strong>大白话：</strong> 你交的保费，一部分用于保障，一部分保险公司拿去投资。如果投资赚了钱，或者实际赔付比预期少，保险公司会把一部分“盈余”分给你。</p>
+    <p><strong>精算定义：</strong> 分红险是指保险公司将其实际经营成果优于定价假设的盈余，按一定比例向保单持有人进行分配的人身保险。盈余主要来源于“三差”。</p>
+    <div class="alert-box">
+        ⚠️ <strong>重要：分红险的“保底”是什么？</strong><br>
+        如果分红为0，你的保底收益就是<strong>现金价值对应的收益率</strong>。现金价值写进合同，退保时能拿到的钱。很多产品前几年现金价值远低于已交保费，这意味着分红为0时退保会亏损。所以，分红险的“保底”不是“不亏本”，而是“现金价值增长”。
+    </div>
+    <h3>万能险（Universal Life Insurance）</h3>
+    <p><strong>大白话：</strong> 你交的保费，扣除费用后进入一个“投资账户”，账户价值按保险公司公布的“结算利率”增值。你可以灵活追加保费或部分领取。万能险有<strong>保底利率</strong>（目前上限1.5%），即使保险公司投资亏损，你的账户价值也不会低于按保底利率计算的值。</p>
+    <p><strong>精算定义：</strong> 万能险是一种具有保险保障功能，且保单价值与保险公司投资账户收益挂钩的保险产品。设有最低保证利率（目前1.0%-1.5%）。</p>
+    <h3>两者对比</h3>
+    <table>
+        <thead><tr><th>维度</th><th>分红险</th><th>万能险</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">收益形式</td><td>分红（不确定，每年公布）</td><td>结算利率（每月公布，有保底）</td> </tr
+            <tr><td style="font-weight:600">保底收益</td><td>无直接保底，保底体现在现金价值</td><td>有保底利率（1.0%-1.5%）</td> </tr
+            <tr><td style="font-weight:600">最差情况</td><td>分红为0，靠现金价值增长</td><td>结算利率降到保底</td> </tr
+            <tr><td style="font-weight:600">透明度</td><td>分红实现率可查</td><td>结算利率每月公布</td> </tr
+            <tr><td style="font-weight:600">灵活性</td><td>差（一般不能追加保费）</td><td>好（可追加、可部分领取）</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 分红险是“保险公司赚了钱分你一点，赚不到可能没有。但至少现金价值在增长”。万能险是“你的钱单独一个账户，每月给你一个利息，有保底”。</div>
+
+    <h2>三、分红从哪里来？——“三差”</h2>
+    <p>分红险的红利来源于“三差”，即实际经营结果与定价假设的差异：</p>
+    <table>
+        <thead><tr><th>差异类型</th><th>定价假设</th><th>实际更好则产生盈余</th><th>说人话</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">死差</td><td>预定死亡率</td><td>实际死亡人数少于预期</td><td>赔的钱少了，省下来的分给你</td> </tr
+            <tr><td style="font-weight:600">利差</td><td>预定利率（如2.0%）</td><td>实际投资收益率 > 2.0%</td><td>投资多赚的钱分给你</td> </tr
+            <tr><td style="font-weight:600">费差</td><td>预定附加费用率</td><td>实际运营成本低于预期</td><td>省下的管理费分给你</td> </tr
+        </tbody>
+    </table>
+    <p><strong>其中利差是主要来源。</strong> 当市场利率下行，保险公司投资收益率下降，利差就会收窄甚至变为负值，分红就会减少甚至为0。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 保险公司赚钱了分你一点，不赚钱就不分。不要指望分红发家致富。</div>
+
+    <h2>四、演示利率 vs 实际实现率（2026年5月起新规）</h2>
+    <h3>监管规定的演示利率（2026年5月起）</h3>
+    <table>
+        <thead><tr><th>产品类型</th><th>演示利率</th><th>说明</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">分红险</td><td>最高3.5%（中档）</td><td>取消高档，仅演示两档：保证利率（0或预定利率）和中档3.5%</td> </tr
+            <tr><td style="font-weight:600">万能险</td><td>最低保证利率 + 中档3.5%</td><td>同样取消高档，仅演示保证利率和中档</td> </tr
+        </tbody>
+    </table>
+    <div class="alert-box">
+        ⚠️ <strong>精算师提醒：</strong> 2026年5月起，监管禁止演示高档收益（此前高档常设为4.5%以上）。这意味着你再也看不到“高档演示”的数字了，只能看到中档3.5%。但3.5%依然是不保证的，实际能实现多少，要看保险公司的投资能力。
+    </div>
+    <h3>实际实现率情况（行业参考）</h3>
+    <table>
+        <thead><tr><th>演示档次</th><th>实现概率</th><th>说明</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">保证部分（低档）</td><td>100%</td><td>写进合同，必须给（分红险的保证体现在现金价值，万能险体现在保底利率）</td> </tr
+            <tr><td style="font-weight:600">中档（3.5%）</td><td>50%-80%</td><td>取决于保险公司投资能力，当前市场下实现3.5%有一定压力</td> </tr
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 新规之后，演示利率变“朴素”了，但3.5%仍然只是“努力目标”。别以为监管限高了，收益就变低了——实际收益还得看保险公司的真本事。</div>
+
+    <h2>五、分红险——销售误导的“重灾区”</h2>
+    <p>分红险是销售误导的高发地带。以下是常见话术与真相：</p>
+    <div class="sales-talk-box">
+        <table style="margin:0;">
+            <thead><tr><th>销售话术</th><th>真相</th> </tr</thead>
+            <tbody>
+                <tr><td>“我们公司分红一直很高，去年4.5%”</td><td>过去不代表未来，且4.5%可能是演示利率，不是实际分红率</td> </tr
+                <tr><td>“这款产品相当于存钱，每年拿分红”</td><td>分红不保证，且提前退保可能亏本</td> </tr
+                <tr><td>“分红比银行利息高多了”</td><td>银行利息是确定的，分红是不确定的，不能直接比</td> </tr
+                <tr><td>“这款产品停售了，以后买不到了”</td><td>停售可能是产品调整，不一定是“稀缺机会”</td> </tr
+                <tr><td>“分红实现率100%，放心买”</td><td>实现率100%只说明兑现了演示，不代表收益高</td> </tr
+                <tr><td>“演示利率要降了，赶紧买，不然以后收益低了”</td><td>误导！演示降不代表实际分红降，别信</td> </tr
+            </tbody>
+        </table>
+    </div>
+    <div class="alert-box">
+        🚨 <strong>精算师提醒：</strong> 如果销售跟你说“分红是保证的”，请直接走人。分红险的“非保证”三个字，是写在合同里的。
+    </div>
+
+    <h2>六、怎么选分红险？——五步法</h2>
+    <div class="step-list">
+        <table style="margin:0;">
+            <thead><tr><th>步骤</th><th>看什么</th><th>怎么判断</th> </tr</thead>
+            <tbody>
+                <tr><td>第一步</td><td>保证收益（现金价值）</td><td>保底部分越高越好，这是“底薪”。对比不同年份的现金价值，选回本快、增值稳的</td> </tr
+                <tr><td>第二步</td><td>历史分红实现率</td><td>看过去5-10年，稳定在90%以上为佳</td> </tr
+                <tr><td>第三步</td><td>公司投资能力</td><td>查过去5-10年综合投资收益率，是否稳定在4%以上</td> </tr
+                <tr><td>第四步</td><td>公司资产负债管理能力</td><td>偿付能力充足率、风险评级、久期缺口</td> </tr
+                <tr><td>第五步</td><td>销售话术</td><td>如果销售只说“高分红”不提“非保证”，或炒作“演示利率下调”，转身走</td> </tr
+            </tbody>
+        </table>
+    </div>
+    <div class="shuorenhua"><strong>说人话：</strong> 选分红险，不是选“演示最高的”，而是选“最可能兑现、且长期稳定”的。</div>
+
+    <h2>七、精算师补充：几个你必须知道的真相</h2>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>实现率高，不代表收益高。</strong> 同一家公司不同产品的实现率差异很大，要具体看。</li>
+        <li><strong>公司赚钱，不代表分红高。</strong> 保险公司赚钱≠分红水平高；公司亏钱≠分红水平低。分红政策受多种因素影响。</li>
+        <li><strong>过去好，不代表未来好。</strong> 一家公司过去5年实现率都在100%以上，不代表明年还能做到。尤其要警惕：股东变更了、管理层大换血、经营策略调整、投资团队换人——这些都可能改变分红政策。</li>
+    </ul>
+
+    <h2>八、如何查分红实现率？——你的知情权</h2>
+    <p>监管要求保险公司必须在官网披露<strong>分红实现率</strong>。<br><strong>查询步骤：</strong><br>1. 打开保险公司官网 → 公开信息披露 → 专项信息 → 分红保险/万能保险。<br>2. 找到“分红实现率报告”或“万能险结算利率公告”。<br>3. 查看过去5年的数据。</p>
+    <h3>分红实现率怎么读</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>实现率100%</strong>：实际分红 = 演示中档 → 合格。</li>
+        <li><strong>实现率>100%</strong>：实际分红高于演示 → 优秀。</li>
+        <li><strong>实现率<100%</strong>：实际分红低于演示 → 不达标，谨慎选择。</li>
+    </ul>
+    <h3>万能险结算利率怎么读</h3>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li>查看过去12-24个月的结算利率走势。如果一直下降（比如从4.5%降到2.5%），说明公司投资承压。</li>
+        <li>关注“保底利率”和“现行利率”的差距。差距越小，越安全。</li>
+    </ul>
+    <div class="shuorenhua"><strong>说人话：</strong> 不要听业务员口头说“我们公司分红高”。自己上官网查历史数据，如果查不到或实现率常年低于80%，果断换产品。</div>
+
+    <h2>九、表格：分红险 vs 万能险 vs 传统年金</h2>
+    <table>
+        <thead><tr><th>维度</th><th>传统年金</th><th>分红险</th><th>万能险</th> </tr</thead>
+        <tbody>
+            <tr><td style="font-weight:600">收益确定性</td><td>100%确定</td><td>保底低，分红不确定</td><td>保底低，结算浮动</td> </tr
+            <tr><td style="font-weight:600">潜在收益</td><td>2.0%-2.5%</td><td>1.5%-3.0%（看实现率）</td><td>1.0%-2.8%（看结算利率）</td> </tr
+            <tr><td style="font-weight:600">风险</td><td>无</td><td>分红可能为0</td><td>结算利率可能降到保底</td> </tr
+            <tr><td style="font-weight:600">适合人群</td><td>厌恶风险，追求确定</td><td>能接受一定波动，想博取更高收益</td><td>希望灵活缴费/领取，接受浮动收益</td> </tr
+            <tr><td style="font-weight:600">透明度</td><td>高</td><td>中（需查实现率）</td><td>高（每月公布结算利率）</td> </tr
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th> </tr</thead>
+            <tbody>
+                <tr><td style="font-weight:600">分红险</td><td>Participating Insurance</td><td>保险公司赚了钱分你一点，不赚可能没有。保底看现金价值。</td> </tr
+                <tr><td style="font-weight:600">万能险</td><td>Universal Life</td><td>你的钱单独账户，每月公布利息，有保底。</td> </tr
+                <tr><td style="font-weight:600">三差</td><td>Three Differences</td><td>死差、利差、费差，分红的来源。</td> </tr
+                <tr><td style="font-weight:600">分红实现率</td><td>Dividend Fulfillment Ratio</td><td>实际分红 ÷ 演示分红 × 100%。</td> </tr
+                <tr><td style="font-weight:600">结算利率</td><td>Crediting Rate</td><td>万能险每月公布的收益率。</td> </tr
+                <tr><td style="font-weight:600">保底利率</td><td>Guaranteed Rate</td><td>万能险最低保证利率（1.0%-1.5%）。</td> </tr
+                <tr><td style="font-weight:600">中档演示利率</td><td>Mid-Rate Illustration</td><td>2026年5月起最高3.5%，不保证。</td> </tr
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="13-年金险IRR.html"><small>← 上一篇</small>第13章 · 年金险值不值得买？IRR 算清楚</a><a class="next" href="15-保险公司安全网.html"><small>下一篇 →</small>第15章 · 保险公司会不会破产？保单安全吗</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>

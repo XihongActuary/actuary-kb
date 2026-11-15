@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精算师说保险 · 第6章：一张保单的价格是怎么拆出来的</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-id="06">
+<button class="navbtn" type="button">☰ 目录</button>
+<aside class="side">
+  <div class="brand"><b>精算师说保险</b><span>不推销，只讲逻辑——一个精算师把保险的门道讲清楚</span></div>
+  <nav>
+<div class="grp">开卷</div>
+<a href="00-序言.html">序言 · 为什么你需要懂一点儿精算</a>
+<div class="grp">基础篇 · 三大基石（第1～5章）</div>
+<a href="01-大数法则.html">第1章 · 大数法则与风险分摊</a>
+<a href="02-生命表.html">第2章 · 生命表与死亡率</a>
+<a href="03-利息与折现.html">第3章 · 利息与折现</a>
+<a href="04-风险分级与定价.html">第4章 · 风险分级与定价</a>
+<a href="05-不确定性vs风险.html">第5章 · 不确定性 vs 风险</a>
+<div class="grp">进阶篇 · 核心工作（第6～10章）</div>
+<a href="06-保单价格拆解.html" class="on">第6章 · 一张保单的价格是怎么拆出来的</a>
+<a href="07-准备金与投资.html">第7章 · 准备金与投资</a>
+<a href="08-自然保费vs均衡保费.html">第8章 · 自然保费 vs 均衡保费</a>
+<a href="09-利差损与资产负债管理.html">第9章 · 利差损与资产负债管理</a>
+<a href="10-产品停售的真相.html">第10章 · 产品停售的真相</a>
+<div class="grp">应用篇 · 买对保险（第11～16章）</div>
+<a href="11-买重疾险.html">第11章 · 如何用精算思维买重疾险</a>
+<a href="12-百万医疗险.html">第12章 · 百万医疗险为什么这么便宜</a>
+<a href="13-年金险IRR.html">第13章 · 年金险值不值得买？IRR 算清楚</a>
+<a href="14-分红万能演示利率.html">第14章 · 分红险/万能险的演示利率可信吗</a>
+<a href="15-保险公司安全网.html">第15章 · 保险公司会不会破产？保单安全吗</a>
+<a href="16-行业未来.html">第16章(上) · 精算师眼中的行业未来</a>
+<a href="17-AI与精算师.html">第16章(下) · AI 会让保险更便宜吗</a>
+<div class="grp">收官</div>
+<a href="18-全书结语.html">全书结语 · 精算思维陪你走完</a>
+<div class="grp">关于</div>
+<a href="resources.html">延伸资源 · 官方外链与姊妹站</a>
+<a href="xihong.html">关于 · 西红精算</a>
+  </nav>
+  <div class="prog-mini">已读 <b id="kb-mini">0 / 19</b> 页<br>点每页右下角按钮记录进度</div>
+</aside>
+<main class="main">
+<div class="art-host">
+<style>
+.art-host *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+.art-host body{
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            padding: 20px 0 40px;
+        }
+.art-host .article-container{
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            padding: 30px 20px 50px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+        }
+.art-host .title-section{
+            margin-bottom: 28px;
+            border-left: 5px solid #e67e22;
+            padding-left: 18px;
+        }
+.art-host .series{
+            font-size: 14px;
+            color: #e67e22;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+.art-host .main-title{
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e2a3e;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+.art-host p{
+            margin-bottom: 1.2em;
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 0.2px;
+        }
+.art-host h2{
+            font-size: 21px;
+            font-weight: 600;
+            margin: 1.5em 0 0.8em;
+            color: #1e466e;
+            border-left: 4px solid #f39c12;
+            padding-left: 14px;
+        }
+.art-host h3{
+            font-size: 18px;
+            font-weight: 600;
+            margin: 1.2em 0 0.6em;
+            color: #c0392b;
+        }
+.art-host .insight-box{
+            background-color: #fef5e8;
+            border-left: 4px solid #f39c12;
+            padding: 16px 18px;
+            margin: 1.6em 0;
+            border-radius: 14px;
+            font-size: 15px;
+            color: #5d4a2e;
+        }
+.art-host .shuorenhua{
+            background-color: #f0f4fa;
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin: 1.2em 0;
+            font-style: normal;
+            color: #1e466e;
+            font-size: 15px;
+            border: 1px solid #dce5ef;
+        }
+.art-host .shuorenhua strong{
+            color: #2c5282;
+        }
+.art-host table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6em 0;
+            font-size: 14px;
+            background-color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        }
+.art-host th{
+            background-color: #f8f3ea;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #4a3b28;
+            border: 1px solid #e2dcd2;
+        }
+.art-host td{
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #e9e2d8;
+            vertical-align: top;
+        }
+.art-host .table-caption{
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.art-host .action-tips{
+            background-color: #eef2f7;
+            border-radius: 20px;
+            padding: 18px 20px;
+            margin: 1.8em 0;
+            border: 1px solid #dce5ec;
+        }
+.art-host .action-tips p{
+            margin-bottom: 0.6em;
+        }
+
+
+.art-host hr{
+            margin: 30px 0 20px;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e0e0, #ffffff);
+        }
+.art-host .speed-card{
+            background-color: #f9fafc;
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+.art-host .speed-card h4{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+@media (max-width: 550px){.art-host .article-container{
+                padding: 20px 16px 40px;
+            }
+.art-host .main-title{
+                font-size: 24px;
+            }
+.art-host th,.art-host td{
+                font-size: 12px;
+                padding: 6px 4px;
+            }}
+</style>
+<style>.art-host .article-container{max-width:800px}.chap-banner{margin:0 0 24px;border:1px solid #e0d8c4;border-radius:14px;overflow:hidden}.chap-banner svg{display:block;width:100%;height:auto}.art-host .article-container p{line-height:2.05 !important;margin:0 0 15px !important;font-size:15.5px !important;color:#3a382f !important;font-family:inherit}.art-host .article-container li{line-height:2 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container td,.art-host .article-container th{line-height:1.8 !important;font-size:13.5px !important}.art-host .article-container h2{font-size:21px !important;color:#2b2a26 !important;margin:36px 0 16px !important;line-height:1.55 !important;letter-spacing:1px;font-family:var(--serif)}.art-host .article-container h3{font-size:17px !important;color:#2f6b5a !important;margin:24px 0 12px !important;line-height:1.6 !important;font-family:var(--serif)}.art-host .article-container h4{font-size:15px !important;color:#2b2a26 !important;margin:18px 0 10px !important;line-height:1.6 !important}.art-host .article-container strong{color:#2b2a26 !important}.art-host .article-container a{color:#2f6b5a !important}.art-host .article-container hr{border:none;border-top:1px dashed #cfc5ab;margin:26px 0 !important}.art-host .article-container .shuorenhua,.art-host .article-container .alert-box,.art-host .article-container .insight-box,.art-host .article-container .action-tips,.art-host .article-container .tool-box,.art-host .article-container .checklist,.art-host .article-container .table-caption,.art-host .article-container .list-note,.art-host .article-container .sales-talk-box,.art-host .article-container .step-list,.art-host .article-container .ref-links,.art-host .article-container .index-list,.art-host .article-container .index-card{line-height:1.95 !important;font-size:15px !important;color:#3a382f !important}.art-host .article-container .speed-card{line-height:1.9 !important;font-size:14.5px !important;color:#3a382f !important}</style>
+<div class="article-container"><figure class="chap-banner"><svg viewBox="0 0 680 190" role="img" aria-label="章节插画"><rect width="680" height="190" fill="#fcf5e6"/><circle cx="598" cy="54" r="44" fill="#e6b45c" opacity="0.10"/><circle cx="598" cy="54" r="28" fill="#e6b45c" opacity="0.16"/><circle cx="598" cy="54" r="14" fill="#e6b45c" opacity="0.85"/><ellipse cx="340" cy="172" rx="305" ry="9" fill="#e3d5b4" opacity="0.5"/><rect x="90" y="84" width="230" height="46" rx="6" fill="#bf5638"/><rect x="320" y="84" width="150" height="46" rx="6" fill="#3d7a66"/><rect x="470" y="84" width="90" height="46" rx="6" fill="#c98f2b"/><rect x="560" y="84" width="60" height="46" rx="6" fill="#e3d5b4"/><text x="205" y="112" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">纯风险保费</text><text x="395" y="112" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">储蓄成分</text><text x="515" y="112" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">费用</text><text x="590" y="112" font-size="13" fill="#f5f1e6" text-anchor="middle" font-family="serif">利润</text><line x1="90" y1="70" x2="620" y2="70" stroke="#e3d5b4" stroke-width="2" stroke-dasharray="6 6"/><text x="90" y="60" font-size="13" fill="#3a3428" font-family="serif">你交的每一块钱，四份去处</text></svg></figure>
+    <div class="title-section">
+        <div class="series">精算师说保险 · 第6章</div>
+        <div class="main-title">一张保单的价格是怎么拆出来的？<br>——保费三元素</div>
+        </div>
+
+    <p>很多朋友问我：<br>“为什么我交的保费比纯赔款多那么多？保险公司是不是赚走了差价？”<br>“网上有些产品特别便宜，是不是偷工减料了？”<br>“保险公司的利润很高吗？他们靠什么赚钱？”</p>
+    <p>这些问题，都指向一个核心——<strong>你交的保费，到底去了哪里？</strong><br>今天，我带你拆开一张保单，看看精算师是怎么把保费“切”成三块的。</p>
+
+    <h2>一、一个精算师的真实案例：保费拆解实验</h2>
+    <p>几年前，我帮一位客户分析他买的百万医疗险。<br>年保费500元，保额200万。客户问：“我一年最多也就花一两万看病，保险公司收我500，它怎么赚钱？”</p>
+    <p>我给他画了一张图：</p>
+    <div class="insight-box">
+        📊 <strong>保费500元 = 纯保费430元 + 平均附加费用50元 + 安全边际20元</strong><br><br>
+        - <strong>纯保费（430元）</strong>：用来赔给那些生病住院的人。这是保险的核心成本。<br>
+        - <strong>平均附加费用（50元）</strong>：保险公司的运营成本——销售佣金、核保费用、客服工资、系统维护、房租水电。平摊到每张保单。<br>
+        - <strong>安全边际（20元）</strong>：多收的一点“备用金”。万一实际赔款比预期高（比如流感大爆发），这笔钱能兜底。
+    </div>
+    <p>客户恍然大悟：“原来我交的500块，只有430块真正用来赔给别人，剩下的70块是保险公司的‘跑腿费’和‘应急金’。”</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 你交的保费，不是全进了保险公司的腰包。大部分要赔出去，剩下的要付工资、交房租、留点备用。</div>
+
+    <h2>二、核心原理：保费三元素</h2>
+    <p>精算师把保费拆成三个部分：</p>
+    <table>
+        <thead><tr><th>组成部分</th><th>英文</th><th>定义</th><th>用途</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">纯保费</td><td>Pure Premium</td><td>预期赔款或给付的现值</td><td>赔付给发生保险事故的人，或给付年金、满期金</td></tr>
+            <tr><td style="font-weight:600">平均附加费用</td><td>Average Expense Loading</td><td>保险公司总运营成本 ÷ 总保费</td><td>销售佣金、管理费、税金等</td></tr>
+            <tr><td style="font-weight:600">安全边际</td><td>Safety Margin / Risk Loading</td><td>应对不确定性波动的额外收费</td><td>防止实际赔款超预期导致亏损</td></tr>
+        </tbody>
+    </table>
+    <p><strong>总保费 = 纯保费 + 平均附加费用 + 安全边际</strong><br>注：平均附加费用率 = 保险公司总费用 ÷ 总保费，是一个平均值。不同产品、不同渠道会有差异。</p>
+
+    <h3>2.1 纯保费（Pure Premium）</h3>
+    <p>精算师根据生命表/重疾发生率表、预定利率，计算出未来预期赔款或给付的<strong>现值</strong>。</p>
+    <p><strong>举例：</strong> 30岁男性，100万保额的定期寿险，一年期。年死亡率0.001，纯保费 = 100万 × 0.001 = 1000元（不考虑折现，因为一年期很短）。<br>如果保险期间超过一年，还要把各年的赔款折现到现在。</p>
+    <p>对于养老年金、增额终身寿等储蓄类产品，纯保费占比极高（通常90%以上），因为这些产品的大部分保费都用于积累和投资，只有很少一部分用于支付当年的风险成本。</p>
+
+    <h3>2.2 平均附加费用（Average Expense Loading）</h3>
+    <p>保险公司的总运营成本包括：<br>- <strong>佣金</strong>：支付给代理人的提成（通常首年较高，续年较低）<br>- <strong>核保与承保成本</strong>：体检、健康调查、系统处理<br>- <strong>管理费用</strong>：客服、IT、办公室、行政<br>- <strong>税金与监管费</strong>：保险保障基金、监管费等</p>
+    <p><strong>平均附加费用率</strong> = 总费用 ÷ 总保费。行业实际情况：<br>- 保障类产品（重疾、医疗、定寿）：10%-20%<br>- 理财类产品（养老年金、增额终身寿）：2%-5%（大额保单甚至更低）<br>- 分红险/万能险：3%-8%（包含投资账户管理费）</p>
+
+    <h3>2.3 安全边际（Safety Margin）</h3>
+    <p>也叫<strong>风险附加</strong>。因为未来的实际赔款可能高于预期（比如流行病、自然灾害），精算师会多收一点钱作为“缓冲垫”。<br>安全边际的大小取决于：<br>- 风险波动性：发生率越不稳定的风险，安全边际越高。<br>- 保单数量：客户量越小，波动越大，安全边际越高。<br>- 资本要求：监管要求保险公司持有一定资本，安全边际可以补充资本。</p>
+    <p>对于理财类产品（如养老年金、增额终身寿），安全边际主要来自<strong>利差</strong>，而不是直接的风险附加。保险公司通过预定利率和实际投资收益率的差值来获取安全边际，在保费中体现为纯保费的一部分，不单独列示。因此这些产品的直接安全边际占比很低（通常1%-3%）。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 安全边际就是保险公司给自己留的“后悔药”。万一算错了，不至于破产。</div>
+
+    <h2>三、生活类比：买咖啡 vs 买保险</h2>
+    <p>你去咖啡店买一杯30元的拿铁。</p>
+    <ul style="margin-left: 1.8em; margin-bottom: 1.2em;">
+        <li><strong>咖啡豆成本（纯保费）</strong>：约5元。这是核心原料。</li>
+        <li><strong>房租、人工、设备（平均附加费用）</strong>：约20元。你为环境和服务付费。</li>
+        <li><strong>利润（安全边际的一部分）</strong>：约5元。店家要赚钱。</li>
+    </ul>
+    <p>保险也一样。你交的保费里：<br>- <strong>纯保费</strong>：真正用来赔或给付的钱。<br>- <strong>平均附加费用</strong>：保险公司的“房租和人工”。<br>- <strong>安全边际</strong>：保险公司的“备用金”。</p>
+    <div class="shuorenhua"><strong>说人话：</strong> 如果你只比价格，不看附加费用率和服务，就像只比咖啡豆成本，不去店里喝。</div>
+
+    <h2>四、精算师视角：为什么不同公司保费差异大？</h2>
+    <p>同样是100万保额的重疾险，A公司卖5000元，B公司卖7000元，差在哪？</p>
+    <table>
+        <thead><tr><th>差异来源</th><th>A公司（便宜）</th><th>B公司（贵）</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">纯保费</td><td>用更优化的生命表/发生率</td><td>用保守的假设（多预留）</td></tr>
+            <tr><td style="font-weight:600">平均附加费用率</td><td>互联网销售，佣金低，费用率10%</td><td>代理人渠道，佣金高，费用率18%</td></tr>
+            <tr><td style="font-weight:600">安全边际</td><td>客户量大，波动小，安全边际低</td><td>客户量小，留更多缓冲</td></tr>
+            <tr><td style="font-weight:600">利润目标</td><td>薄利多销</td><td>高利润率</td></tr>
+        </tbody>
+    </table>
+    <div class="shuorenhua"><strong>说人话：</strong> 便宜的不一定“偷工减料”，可能是渠道成本低、客户量大。贵的不一定“保障好”，可能是佣金高、公司要赚更多。<br><strong>你的行动：</strong> 在同等保障责任下，优先选便宜的。但要确认公司偿付能力充足、再保险安排合理。</div>
+
+    <h2>五、表格：不同类型产品的保费构成（行业实际情况）</h2>
+    <table>
+        <thead><tr><th>产品类型</th><th>纯保费占比</th><th>平均附加费用率</th><th>安全边际占比</th><th>特点</th></tr></thead>
+        <tbody>
+            <tr><td style="font-weight:600">一年期医疗险</td><td>75%-85%</td><td>8%-12%</td><td>3%-5%</td><td>纯保费高，费用率较低</td></tr>
+            <tr><td style="font-weight:600">定期寿险</td><td>85%-90%</td><td>5%-8%</td><td>2%-3%</td><td>纯保费占比极高，性价比高</td></tr>
+            <tr><td style="font-weight:600">终身重疾险</td><td>75%-85%</td><td>8%-12%</td><td>3%-5%</td><td>费用率适中</td></tr>
+            <tr><td style="font-weight:600">养老年金</td><td>90%-95%</td><td>2%-4%</td><td>1%-2%</td><td>纯保费占比极高，费用率极低</td></tr>
+            <tr><td style="font-weight:600">增额终身寿险</td><td>90%-95%</td><td>2%-4%</td><td>1%-2%</td><td>纯保费占比极高，费用率极低</td></tr>
+            <tr><td style="font-weight:600">分红险/万能险</td><td>85%-90%</td><td>3%-6%</td><td>2%-4%</td><td>纯保费高，含投资账户管理费</td></tr>
+        </tbody>
+    </table>
+    <div class="table-caption">注：以上为行业实际情况。理财类产品（养老年金、增额终身寿）的保费绝大部分进入纯保费用于积累和投资，运营成本占比很低。分红险/万能险因涉及投资账户管理，费用率略高但仍控制在较低水平。</div>
+    <div class="shuorenhua"><strong>说人话：</strong> 无论保障类还是储蓄类，保费的大部分都是“干正事”的钱——要么赔出去，要么投资增值。保险公司的运营成本（佣金、管理费）占比其实不高，尤其是理财类产品，费用率很低。所谓“保险公司赚走一半”的说法，严重偏离事实。</div>
+
+    <hr>
+
+    <!-- 核心概念速记卡 -->
+    <div class="speed-card">
+        <h4>📌 本章核心概念速记卡（中英文对照）</h4>
+        <table style="margin: 0; box-shadow: none;">
+            <thead><tr><th>中文</th><th>英文</th><th>一句话大白话</th></tr></thead>
+            <tbody>
+                <tr><td>纯保费</td><td>Pure Premium</td><td>真正用来赔或给付的钱。</td></tr>
+                <tr><td>平均附加费用</td><td>Average Expense Loading</td><td>保险公司的“房租、工资、佣金”平摊到每张保单。</td></tr>
+                <tr><td>平均附加费用率</td><td>Expense Ratio</td><td>总费用 ÷ 总保费，反映运营效率。</td></tr>
+                <tr><td>安全边际</td><td>Safety Margin / Risk Loading</td><td>多收的“备用金”，防止赔穿。</td></tr>
+                <tr><td>总保费</td><td>Gross Premium</td><td>纯保费 + 平均附加费用 + 安全边际。</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size: 13px; text-align: center; color: #95a5a6; margin-top: 16px;">* 完 *</p>
+</div>
+</div>
+<div class="pager"><a href="05-不确定性vs风险.html"><small>← 上一篇</small>第5章 · 不确定性 vs 风险</a><a class="next" href="07-准备金与投资.html"><small>下一篇 →</small>第7章 · 准备金与投资</a></div>
+<footer class="colophon">精算师说保险 · 西红精算 · 不推销，只讲逻辑<br>本文只讲逻辑与方法，不构成任何投保建议；具体产品请以条款与官方信息披露为准。</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
